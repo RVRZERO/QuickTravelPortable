@@ -1,0 +1,61 @@
+void Open_PortIslandStation_Win_001()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( PortIslandStation );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 1: // Station Outskirts
+			if(Chk_Access_PortIslandStation_001_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 10, 2, 0, 0 );
+			}
+			break;
+		case 2: // Town Map
+			if(Chk_Access_PortIslandStation_001_MAP())
+			{
+				FADE( 1, 0 );
+				FADE_SYNC();
+				CALL_MAP( 2 );
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_PortIslandStation_Win_002()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( PortIslandStation );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // Port Island Station
+			if(Chk_Access_PortIslandStation_002_001())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 10, 1, 1, 0 );
+			}
+			break;
+		case 2: // Town Map
+			if(Chk_Access_PortIslandStation_002_MAP())
+			{
+				FADE( 1, 0 );
+				FADE_SYNC();
+				CALL_MAP( 2 );
+			}
+			break;
+		default:
+			break;
+	}
+}

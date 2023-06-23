@@ -1,0 +1,866 @@
+void Open_Dorm_Win_001()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 42 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_001_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_001_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 0, 0 );
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_001_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_001_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					if(Chk_Access_Dorm_004_005())
+					{
+						if(Chk_Access_Dorm_005_006())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_001_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					if(Chk_Access_Dorm_002_009())
+					{
+						if(Chk_Access_Dorm_009_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP ( 5 );
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_002()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	{
+		SET_MASK( 49 );
+	}
+	else
+	{
+		SET_MASK( 41 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_002_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 1, 0 );
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_002_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 3: // 4F, Hallway
+			if(Chk_Access_Dorm_002_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					if(Chk_Access_Dorm_004_005())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 5, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_002_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					if(Chk_Access_Dorm_004_005())
+					{
+						if(Chk_Access_Dorm_005_006())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+				break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_002_009())
+			{
+				if(Chk_Access_Dorm_009_MAP())
+				{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 5 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_003()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	{
+		SET_MASK( 50 );
+	}
+	else
+	{
+		SET_MASK( 42 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_003_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 2, 1, 0 );
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_003_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 4, 1, 0 );
+			}
+			break;
+		case 3: // 4F, Hallway
+			if(Chk_Access_Dorm_003_004())
+			{
+				if(Chk_Access_Dorm_004_005())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 5, 0, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_003_004())
+			{
+				if(Chk_Access_Dorm_004_005())
+				{
+					if(Chk_Access_Dorm_005_006())
+					{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_003_002())
+			{
+				if(Chk_Access_Dorm_002_009())
+				{
+					if(Chk_Access_Dorm_009_MAP())
+					{
+						FADE( 1, 0 );
+						FADE_SYNC();
+						CALL_MAP( 5 );
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_004()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	{
+		SET_MASK( 52 );
+	}
+	else
+	{
+		SET_MASK( 44 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_004_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_004_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 2, 0 );
+			}
+			break;
+		case 3: // 4F, Hallway
+			if(Chk_Access_Dorm_004_005())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 5, 0, 0 );
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_004_005())
+			{
+				if(Chk_Access_Dorm_005_006())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 6, 0, 0 );
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_004_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					if(Chk_Access_Dorm_002_009())
+					{
+						if(Chk_Access_Dorm_009_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 5 );
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_005()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 56 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_005_004())
+			{
+				if(Chk_Access_Dorm_004_003())
+				{
+					if(Chk_Access_Dorm_003_002())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 2, 1, 0 );
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_005_004())
+			{
+				if(Chk_Access_Dorm_004_003())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 2, 0 );
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_005_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 4, 0, 0 );
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_005_006())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 6, 0, 0 );
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_005_004())
+			{
+				if(Chk_Access_Dorm_004_003())
+				{
+					if(Chk_Access_Dorm_003_002())
+					{
+						if(Chk_Access_Dorm_002_009())
+						{
+							if(Chk_Access_Dorm_009_MAP())
+							{
+								FADE( 1, 0 );
+								FADE_SYNC();
+								CALL_MAP( 5 );
+							}
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_006()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 56 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_006_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					if(Chk_Access_Dorm_004_003())
+					{
+						if(Chk_Access_Dorm_003_002())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 2, 1, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_006_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					if(Chk_Access_Dorm_004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 3, 2, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_006_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 0, 0 );
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_006_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					if(Chk_Access_Dorm_004_003())
+					{
+						if(Chk_Access_Dorm_003_002())
+						{
+							if(Chk_Access_Dorm_002_009())
+							{
+								if(Chk_Access_Dorm_009_MAP())
+								{
+									FADE( 1, 0 );
+									FADE_SYNC();
+									CALL_MAP( 5 );
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_007()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 56 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_007_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					if(Chk_Access_Dorm_004_003())
+					{
+						if(Chk_Access_Dorm_003_002())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 2, 1, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_007_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					if(Chk_Access_Dorm_004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 3, 2, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_007_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 0, 0 );
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_007_005())
+			{
+				if(Chk_Access_Dorm_005_004())
+				{
+					if(Chk_Access_Dorm_004_003())
+					{
+						if(Chk_Access_Dorm_003_002())
+						{
+							if(Chk_Access_Dorm_002_009())
+							{
+								if(Chk_Access_Dorm_009_MAP())
+								{
+									FADE( 1, 0 );
+									FADE_SYNC();
+									CALL_MAP( 5 );
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_009()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 31 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 5: // Iwatodai Dorm
+			if(Chk_Access_Dorm_009_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 2, 0, 0 );
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_009_MAP())
+			{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 5 );
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_014()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	{
+		SET_MASK( 50 );
+	}
+	else
+	{
+		SET_MASK( 42 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_014_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_014_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 5, 0 );
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_014_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 3: // 4F, Hallway
+			if(Chk_Access_Dorm_014_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					if(Chk_Access_Dorm_004_005())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 5, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_014_003())
+			{
+				if(Chk_Access_Dorm_003_004())
+				{
+					if(Chk_Access_Dorm_004_005())
+					{
+						if(Chk_Access_Dorm_005_006())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_014_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					if(Chk_Access_Dorm_002_009())
+					{
+						if(Chk_Access_Dorm_009_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 5 );
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_015_Male()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	{
+		SET_MASK( 50 );
+	}
+	else
+	{
+		SET_MASK( 42 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_003_002())
+			{
+				if(Chk_Access_Dorm_015_003())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Dorm_003_004())
+			{
+				if(Chk_Access_Dorm_015_003())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 3: // 4F, Hallway
+			if(Chk_Access_Dorm_003_004())
+			{
+				if(Chk_Access_Dorm_004_005())
+				{
+					if(Chk_Access_Dorm_015_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 5, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_003_004())
+			{
+				if(Chk_Access_Dorm_004_005())
+				{
+					if(Chk_Access_Dorm_005_006())
+					{
+						if(Chk_Access_Dorm_015_003())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_003_002())
+			{
+				if(Chk_Access_Dorm_002_009())
+				{
+					if(Chk_Access_Dorm_009_MAP())
+					{
+						if(Chk_Access_Dorm_015_003())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 5 );
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Dorm_Win_015_Female()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	{
+		SET_MASK( 52 );
+	}
+	else
+	{
+		SET_MASK( 44 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(Chk_Access_Dorm_004_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					if(Chk_Access_Dorm_015_004())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 2, 1, 0 );
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_004_003())
+			{
+				if(Chk_Access_Dorm_015_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 2, 0 );
+				}
+			}
+			break;
+		case 3: // 4F, Hallway
+			if(Chk_Access_Dorm_004_005())
+			{
+				if(Chk_Access_Dorm_015_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 5, 0, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(Chk_Access_Dorm_004_005())
+			{
+				if(Chk_Access_Dorm_005_006())
+				{
+					if(Chk_Access_Dorm_015_004())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 6, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(Chk_Access_Dorm_004_003())
+			{
+				if(Chk_Access_Dorm_003_002())
+				{
+					if(Chk_Access_Dorm_002_009())
+					{
+						if(Chk_Access_Dorm_009_MAP())
+						{
+							if(Chk_Access_Dorm_015_004())
+							{
+								FADE( 1, 0 );
+								FADE_SYNC();
+								CALL_MAP( 5 );
+							}
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}

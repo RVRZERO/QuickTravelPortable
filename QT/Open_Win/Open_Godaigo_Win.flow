@@ -1,0 +1,246 @@
+void Open_Godaigo_Win_002()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 1: // 2F, Hallway
+			if(Chk_Access_Godaigo_002_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 3, 1, 0 );
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Godaigo_002_003())
+			{
+				if(Chk_Access_Godaigo_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 4, 0, 0 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Godaigo_Win_003()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // 1F Lobby
+			if(Chk_Access_Godaigo_003_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 2, 0, 0 );
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Godaigo_003_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 4, 0, 0 );
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Godaigo_Win_004()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 4 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // 1F Lobby
+			if(Chk_Access_Godaigo_004_003())
+			{
+				if(Chk_Access_Godaigo_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 2, 0, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Godaigo_004_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 3, 0, 0 );
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Godaigo_Win_007()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // 1F Lobby
+			if(Chk_Access_Godaigo_007_003())
+			{
+				if(Chk_Access_Godaigo_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 2, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Godaigo_007_003())
+			{
+				if(Chk_Access_Godaigo_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 4, 0, 0 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Godaigo_Win_008()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // 1F Lobby
+			if(Chk_Access_Godaigo_008_003())
+			{
+				if(Chk_Access_Godaigo_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 2, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Godaigo_008_003())
+			{
+				if(Chk_Access_Godaigo_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 4, 0, 0 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Godaigo_Win_009()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // 1F Lobby
+			if(Chk_Access_Godaigo_009_003())
+			{
+				if(Chk_Access_Godaigo_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 2, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Godaigo_009_003())
+			{
+				if(Chk_Access_Godaigo_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 4, 0, 0 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_Godaigo_Win_010()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( Godaigo );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		case 0: // 1F Lobby
+			if(Chk_Access_Godaigo_010_003())
+			{
+				if(Chk_Access_Godaigo_003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 2, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 3F, Hallway
+			if(Chk_Access_Godaigo_010_003())
+			{
+				if(Chk_Access_Godaigo_003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 14, 4, 0, 0 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}

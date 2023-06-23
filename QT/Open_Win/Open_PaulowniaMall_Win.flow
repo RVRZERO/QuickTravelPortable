@@ -1,0 +1,108 @@
+void Open_PaulowniaMall_Win_001()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( PaulowniaMall );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // Back Alley
+			if(Chk_Access_PaulowniaMall_001_009())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 8, 9, 0, 0 );
+			}
+			break;
+		case 2:	// Town Map
+			if(Chk_Access_PaulowniaMall_001_MAP())
+			{
+				FADE( 1, 0 );
+				FADE_SYNC();
+				CALL_MAP( 1 );
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_PaulowniaMall_Win_002()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	int choice = SEL( PaulowniaMall );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // Paulownia Mall
+			if(Chk_Access_PaulowniaMall_002_001())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 8, 1, 3, 0 );
+			}
+			break;
+		case 1: // Back Alley
+			if(Chk_Access_PaulowniaMall_002_001())
+			{
+				if(Chk_Access_PaulowniaMall_001_009())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 8, 9, 0, 0 );
+				}
+			}
+			break;
+		case 2:	// Town Map
+			if(Chk_Access_PaulowniaMall_002_001())
+			{
+				if(Chk_Access_PaulowniaMall_001_MAP())
+				{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 1 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+void Open_PaulowniaMall_Win_009()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 2 );
+	int choice = SEL( PaulowniaMall );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // Paulownia Mall
+			if(Chk_Access_PaulowniaMall_009_001())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 8, 1, 7, 0 );
+			}
+			break;
+		case 2:	// Town Map
+			if(Chk_Access_PaulowniaMall_009_001())
+			{
+				if(Chk_Access_PaulowniaMall_001_MAP())
+				{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 1 );
+				}
+			}
+			break;
+		default:
+			break;
+	}
+}

@@ -1,0 +1,64 @@
+[msg QuickTravel]
+[f 0 8 65278][f 1 31]> Where do you want to go?[e]
+
+[msg Stop_QuickTravel]
+[f 0 8 65278][f 1 31]> You can't fast travel right now.[n][f 0 4][e]
+
+[sel Dorm_F top]
+[f 0 8 65278][f 1 31]1F, Lounge[e]
+[f 0 8 65278][f 1 31]Desert of Doors[e]
+[f 0 8 65278][f 1 31]Velvet Room[e]
+[f 0 8 65278][f 1 31]Paulownia Mall[e]
+
+[sel PaulowniaMall_F top]
+[f 0 8 65278][f 1 31]Iwatodai Dorm[e]
+[f 0 8 65278][f 1 31]Cancel[e]
+
+[sel GekkoukanHigh top]
+[f 0 8 65278][f 1 31]1F, Main Lobby[e]
+[f 0 8 65278][f 1 31]1F, Faculty Office Hallway[e]
+[f 0 8 65278][f 1 31]1F, Laboratory Hallway[e]
+[f 0 8 65278][f 1 31]2F, Classroom Hallway[e]
+[f 0 8 65278][f 1 31]Town Map[e]
+
+[sel Dorm top]
+[f 0 8 65278][f 1 31]1F, Lounge[e]
+[f 0 8 65278][f 1 31]2F, Hallway[e]
+[f 0 8 65278][f 1 31]3F, Hallway[e]
+[f 0 8 65278][f 1 31]4F, Hallway[e]
+[f 0 8 65278][f 1 31]Meeting Room[e]
+[f 0 8 65278][f 1 31]Iwatodai Dorm[e]
+[f 0 8 65278][f 1 31]Town Map[e]
+
+[sel PaulowniaMall top]
+[f 0 8 65278][f 1 31]Paulownia Mall[e]
+[f 0 8 65278][f 1 31]Back Alley[e]
+[f 0 8 65278][f 1 31]Town Map[e]
+
+[sel IwatodaiStation top]
+[f 0 8 65278][f 1 31]Iwatodai Station[e]
+[f 0 8 65278][f 1 31]Iwatodai Strip Mall[e]
+[f 0 8 65278][f 1 31]Strip Mall, 1F[e]
+[f 0 8 65278][f 1 31]Strip Mall, 2F[e]
+[f 0 8 65278][f 1 31]Town map[e]
+
+[sel PortIslandStation top]
+[f 0 8 65278][f 1 31]Port Island Station[e]
+[f 0 8 65278][f 1 31]Station Outskirts[e]
+[f 0 8 65278][f 1 31]Town Map[e]
+
+[sel NaganakiShrine top]
+[f 0 8 65278][f 1 31]Town map[e]
+[f 0 8 65278][f 1 31]Cancel[e]
+
+[sel Godaigo top]
+[f 0 8 65278][f 1 31]1F Lobby[e]
+[f 0 8 65278][f 1 31]2F Hallway[e]
+[f 0 8 65278][f 1 31]3F Hallway[e]
+
+[sel Tartarus top]
+[f 0 8 65278][f 1 31]Tartarus[e]
+[f 0 8 65278][f 1 31]Velvet Room[e]
+[f 0 8 65278][f 1 31]Teleporter[e]
+[f 0 8 65278][f 1 31]Outside[e]
+
