@@ -3,7 +3,15 @@ void Open_IwatodaiStation_Win_001()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 6 );
+	
+	if( ( GET_MONTH() == 10 ) && ( GET_DAY_OF_MONTH() == 4 ) && ( FUNCTION_0083() == 8 ) )
+	{
+		SET_MASK( 14 );
+	}
+	else
+	{
+		SET_MASK( 6 );
+	}
 	int choice = SEL( IwatodaiStation );
 	CLOSE_MSG_WIN();
 	switch(choice)

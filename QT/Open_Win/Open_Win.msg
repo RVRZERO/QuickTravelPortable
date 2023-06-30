@@ -19,6 +19,7 @@
 [f 0 8 65278][f 1 31]1F, Faculty Office Hallway[e]
 [f 0 8 65278][f 1 31]1F, Laboratory Hallway[e]
 [f 0 8 65278][f 1 31]2F, Classroom Hallway[e]
+[f 0 8 65278][f 1 31]Classroom[e]
 [f 0 8 65278][f 1 31]Town Map[e]
 
 [sel Dorm top]

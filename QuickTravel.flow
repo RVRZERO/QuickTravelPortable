@@ -231,12 +231,6 @@ void QuickTravel_PaulowniaMall()
 
 void QuickTravel_IwatodaiStation()
 {
-	bool operation = ( GET_MONTH() == 10 ) && ( GET_DAY_OF_MONTH() == 4 ) && ( FUNCTION_0083() == 8 );
-	if(operation)
-	{
-		Chk_Access_IwatodaiStation_001_002();
-		return;
-	}
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // Iwatodai Strip Mall
