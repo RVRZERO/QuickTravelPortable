@@ -697,7 +697,7 @@ void Open_Dorm_Win_015_Male()
 		case 0: // 1F, Lounge
 			if(Chk_Access_Dorm_003_002())
 			{
-				if(Chk_Access_Dorm_015_003())
+				if(Chk_Access_Dorm_015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -708,7 +708,7 @@ void Open_Dorm_Win_015_Male()
 		case 2: // Your Room
 			if(Chk_Access_Dorm_003_001())
 			{
-				if(Chk_Access_Dorm_015_003())
+				if(Chk_Access_Dorm_015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -719,7 +719,7 @@ void Open_Dorm_Win_015_Male()
 		case 3: // 3F, Hallway
 			if(Chk_Access_Dorm_003_004())
 			{
-				if(Chk_Access_Dorm_015_003())
+				if(Chk_Access_Dorm_015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -734,7 +734,7 @@ void Open_Dorm_Win_015_Male()
 				{
 					if(Chk_Access_Dorm_005_006())
 					{
-						if(Chk_Access_Dorm_015_003())
+						if(Chk_Access_Dorm_015_ANY())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -751,7 +751,7 @@ void Open_Dorm_Win_015_Male()
 				{
 					if(Chk_Access_Dorm_009_MAP())
 					{
-						if(Chk_Access_Dorm_015_003())
+						if(Chk_Access_Dorm_015_ANY())
 						{
 							FADE( 1, 0 );
 							FADE_SYNC();
@@ -788,7 +788,7 @@ void Open_Dorm_Win_015_Female()
 			{
 				if(Chk_Access_Dorm_003_002())
 				{
-					if(Chk_Access_Dorm_015_004())
+					if(Chk_Access_Dorm_015_ANY())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -800,7 +800,7 @@ void Open_Dorm_Win_015_Female()
 		case 1: // 2F, Hallway
 			if(Chk_Access_Dorm_004_003())
 			{
-				if(Chk_Access_Dorm_015_004())
+				if(Chk_Access_Dorm_015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -813,7 +813,7 @@ void Open_Dorm_Win_015_Female()
 			{
 				if(Chk_Access_Dorm_003_001())
 				{
-					if(Chk_Access_Dorm_015_004())
+					if(Chk_Access_Dorm_015_ANY())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -827,7 +827,7 @@ void Open_Dorm_Win_015_Female()
 			{
 				if(Chk_Access_Dorm_005_006())
 				{
-					if(Chk_Access_Dorm_015_004())
+					if(Chk_Access_Dorm_015_ANY())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -845,7 +845,7 @@ void Open_Dorm_Win_015_Female()
 					{
 						if(Chk_Access_Dorm_009_MAP())
 						{
-							if(Chk_Access_Dorm_015_004())
+							if(Chk_Access_Dorm_015_ANY())
 							{
 								FADE( 1, 0 );
 								FADE_SYNC();

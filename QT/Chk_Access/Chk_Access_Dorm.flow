@@ -38,7 +38,8 @@ bool Chk_Access_Dorm_009_002() // ( 7, 2, 0, 0 )
     }
     if ( var14 == 1 )
     {
-        FADE( 1, 0 );
+        Chk_Access_Dorm_015_ANY();
+		FADE( 1, 0 );
         FADE_SYNC();
         NEXT_DAY();
 		return 0;
@@ -220,6 +221,7 @@ bool Chk_Access_Dorm_003_001() // ( 7, 1, 0, 0 )
 			BIT_ON( 3086 );
 		}
 		FUNCTION_0186( 15 );
+		Chk_Access_Dorm_015_ANY();
 		FADE( 1, 0 );
 		FADE_SYNC();
 		if ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) )
@@ -260,6 +262,7 @@ bool Chk_Access_Dorm_003_014() // ( 7, 14, 0, 0 )
         if ( SEL( ROOM_SEL ) == 0 )
         {
             CLOSE_MSG_WIN();
+			Chk_Access_Dorm_015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 14, 0, 0 );
@@ -283,6 +286,7 @@ bool Chk_Access_Dorm_003_014() // ( 7, 14, 0, 0 )
     if ( SEL( ROOM_SEL ) == 0 )
     {
         CLOSE_MSG_WIN();
+		Chk_Access_Dorm_015_ANY();
         FADE( 2, 0 );
         FADE_SYNC();
         CALL_FIELD( 7, 14, 0, 0 );
@@ -359,6 +363,7 @@ bool Chk_Access_Dorm_003_015_Junpei() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3081 );
+			Chk_Access_Dorm_015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -484,6 +489,7 @@ bool Chk_Access_Dorm_003_015_Amada() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3082 );
+			Chk_Access_Dorm_015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -491,19 +497,6 @@ bool Chk_Access_Dorm_003_015_Amada() // ( 7, 15, 0, 0 )
         }
 		CLOSE_MSG_WIN();
 		return 0;
-    }
-	return 1;
-}
-
-bool Chk_Access_Dorm_015_003() // ( 7, 3, 4, 0 ) & ( 7, 3, 6, 0 ), must be used as the last Chk_Access regardless of order
-{
-    if ( BIT_CHK( 3081 ) == 1 )
-    {
-        BIT_OFF( 3081 );
-    }
-    else if ( BIT_CHK( 3082 ) == 1 )
-    {
-        BIT_OFF( 3082 );
     }
 	return 1;
 }
@@ -573,6 +566,7 @@ bool Chk_Access_Dorm_004_015_Huka() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3083 );
+			Chk_Access_Dorm_015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -614,6 +608,7 @@ bool Chk_Access_Dorm_004_015_Aigis() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3084 );
+			Chk_Access_Dorm_015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -625,23 +620,11 @@ bool Chk_Access_Dorm_004_015_Aigis() // ( 7, 15, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_015_004() // ( 7, 4, 4, 0 ) & ( 7, 4, 5, 0 ), must be used as the last Chk_Access regardless of order
-{
-    if ( BIT_CHK( 3083 ) == 1 )
-    {
-        BIT_OFF( 3083 );
-    }
-    else if ( BIT_CHK( 3084 ) == 1 )
-    {
-        BIT_OFF( 3084 );
-    }
-	return 1;
-}
-
 bool Chk_Access_Dorm_004_005() // ( 7, 5, 0, 0 )
 {
     if ( BIT_CHK( 3584 ) == 1 )
     {
+		Chk_Access_Dorm_015_ANY();
 	    FADE( 2, 0 );
 		FADE_SYNC();
         BIT_ON( 15 );
@@ -651,6 +634,7 @@ bool Chk_Access_Dorm_004_005() // ( 7, 5, 0, 0 )
     }
     else if ( BIT_CHK( 3592 ) == 1 )
     {
+		Chk_Access_Dorm_015_ANY();
 		FADE( 2, 0 );
 		FADE_SYNC();
         CALL_FIELD( 7, 5, 5, 0 );
@@ -794,6 +778,7 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
                 MSG( HUKA_LETS_GO_01 );
                 CLOSE_MSG_WIN();
                 BIT_ON( 3774 );
+				Chk_Access_Dorm_015_ANY();
                 FADE( 2, 0 );
                 FADE_SYNC();
                 CALL_FIELD( 34, 1, 2, 0 );
@@ -843,6 +828,7 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
                 OPEN_MSG_WIN();
                 MSG( MSG1103_MITURU_02 );
                 CLOSE_MSG_WIN();
+				Chk_Access_Dorm_015_ANY();
                 FADE( 2, 0 );
                 FADE_SYNC();
                 BIT_ON( 182 );
@@ -903,6 +889,7 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
             {
                 MSG( HUKA_LETS_GO_02 );
                 CLOSE_MSG_WIN();
+				Chk_Access_Dorm_015_ANY();
                 FADE( 2, 0 );
                 FADE_SYNC();
                 BIT_ON( 207 );
@@ -962,5 +949,26 @@ bool Chk_Access_Dorm_005_007() // ( 7, 7, 0, 0 )
 
 bool Chk_Access_Dorm_007_005() // ( 7, 5, 1, 0 )
 {
+	return 1;
+}
+
+bool Chk_Access_Dorm_015_ANY() // Must be used as the last Chk_Access regardless of order
+{
+    if ( BIT_CHK( 3081 ) == 1 )
+    {
+        BIT_OFF( 3081 );
+    }
+    else if ( BIT_CHK( 3082 ) == 1 )
+    {
+        BIT_OFF( 3082 );
+    }
+    else if ( BIT_CHK( 3083 ) == 1 )
+    {
+        BIT_OFF( 3083 );
+    }
+    else if ( BIT_CHK( 3084 ) == 1 )
+    {
+        BIT_OFF( 3084 );
+    }
 	return 1;
 }
