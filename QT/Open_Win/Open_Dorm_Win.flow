@@ -230,7 +230,7 @@ void Open_Dorm_Win_004()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 50 );
+		SET_MASK( 56 );
 	}
 	else
 	{
@@ -249,6 +249,14 @@ void Open_Dorm_Win_004()
 					FADE_SYNC();
 					CALL_FIELD( 7, 2, 1, 0 );
 				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(Chk_Access_Dorm_004_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 2, 0 );
 			}
 			break;
 		case 2: // Your Room
