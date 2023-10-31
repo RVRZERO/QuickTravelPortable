@@ -1,10 +1,10 @@
-bool Chk_Access_Dorm_009_MAP() // ( 5 )
+bool ChkDorm009_MAP() // ( 5 )
 {
 	BIT_ON( 3090 );
 	return 1;
 }
 
-bool Chk_Access_Dorm_009_002() // ( 7, 2, 0, 0 )
+bool ChkDorm009_002() // ( 7, 2, 0, 0 )
 {
 	int var14;
     var14 = 0;
@@ -44,7 +44,7 @@ bool Chk_Access_Dorm_009_002() // ( 7, 2, 0, 0 )
 		if( SEL( INTO_HOME_SEL ) == 0 )
 		{
 			CLOSE_MSG_WIN();
-			Chk_Access_Dorm_015_ANY();
+			ChkDorm015_ANY();
 			FADE( 1, 0 );
 			FADE_SYNC();
 			NEXT_DAY();
@@ -59,7 +59,7 @@ bool Chk_Access_Dorm_009_002() // ( 7, 2, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_002_009() // ( 7, 9, 0, 0 )
+bool ChkDorm002_009() // ( 7, 9, 0, 0 )
 {
     if ( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 9 ) ) )
     {
@@ -161,12 +161,12 @@ bool Chk_Access_Dorm_002_009() // ( 7, 9, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_002_003() // ( 7, 3, 1, 0 )
+bool ChkDorm002_003() // ( 7, 3, 1, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Dorm_003_002() // ( 7, 2, 1, 0 )
+bool ChkDorm003_002() // ( 7, 2, 1, 0 )
 {
     if ( BIT_CHK( 3584 ) == 1 )
     {
@@ -182,7 +182,7 @@ bool Chk_Access_Dorm_003_002() // ( 7, 2, 1, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_003_001() // ( 7, 1, 0, 0 )
+bool ChkDorm003_001() // ( 7, 1, 0, 0 )
 {
 	if ( BIT_CHK( 3584 ) == 1 )
 	{
@@ -253,7 +253,7 @@ bool Chk_Access_Dorm_003_001() // ( 7, 1, 0, 0 )
 					BIT_ON( 3086 );
 				}
 				FUNCTION_0186( 15 );
-				Chk_Access_Dorm_015_ANY();
+				ChkDorm015_ANY();
 				FADE( 1, 0 );
 				FADE_SYNC();
 				if ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) )
@@ -274,7 +274,7 @@ bool Chk_Access_Dorm_003_001() // ( 7, 1, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_001_003() // ( 7, 3, 0, 0 )
+bool ChkDorm001_003() // ( 7, 3, 0, 0 )
 {
     if ( FUNCTION_0083() == 7 )
     {
@@ -286,7 +286,7 @@ bool Chk_Access_Dorm_001_003() // ( 7, 3, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_003_014() // ( 7, 14, 0, 0 )
+bool ChkDorm003_014() // ( 7, 14, 0, 0 )
 {
     OPEN_MSG_WIN();
     if ( BIT_CHK( 3584 ) == 1 )
@@ -301,7 +301,7 @@ bool Chk_Access_Dorm_003_014() // ( 7, 14, 0, 0 )
         if ( SEL( ROOM_SEL ) == 0 )
         {
             CLOSE_MSG_WIN();
-			Chk_Access_Dorm_015_ANY();
+			ChkDorm015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 14, 0, 0 );
@@ -325,7 +325,7 @@ bool Chk_Access_Dorm_003_014() // ( 7, 14, 0, 0 )
     if ( SEL( ROOM_SEL ) == 0 )
     {
         CLOSE_MSG_WIN();
-		Chk_Access_Dorm_015_ANY();
+		ChkDorm015_ANY();
         FADE( 2, 0 );
         FADE_SYNC();
         CALL_FIELD( 7, 14, 0, 0 );
@@ -336,12 +336,12 @@ bool Chk_Access_Dorm_003_014() // ( 7, 14, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_014_003() // ( 7, 3, 5, 0 )
+bool ChkDorm014_003() // ( 7, 3, 5, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Dorm_003_015_Junpei() // ( 7, 15, 0, 0 )
+bool ChkDorm003_015_Junpei() // ( 7, 15, 0, 0 )
 {
     OPEN_MSG_WIN();
     if ( BIT_CHK( 3584 ) == 1 )
@@ -402,7 +402,7 @@ bool Chk_Access_Dorm_003_015_Junpei() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3081 );
-			Chk_Access_Dorm_015_ANY();
+			ChkDorm015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -414,7 +414,7 @@ bool Chk_Access_Dorm_003_015_Junpei() // ( 7, 15, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_003_015_Amada() // ( 7, 15, 0, 0 )
+bool ChkDorm003_015_Amada() // ( 7, 15, 0, 0 )
 {
     OPEN_MSG_WIN();
     if ( BIT_CHK( 3584 ) == 1 )
@@ -528,7 +528,7 @@ bool Chk_Access_Dorm_003_015_Amada() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3082 );
-			Chk_Access_Dorm_015_ANY();
+			ChkDorm015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -540,12 +540,12 @@ bool Chk_Access_Dorm_003_015_Amada() // ( 7, 15, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_003_004() // ( 7, 4, 1, 0 )
+bool ChkDorm003_004() // ( 7, 4, 1, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Dorm_004_003() // ( 7, 3, 2, 0 )
+bool ChkDorm004_003() // ( 7, 3, 2, 0 )
 {
     if ( BIT_CHK( 3584 ) == 1 )
     {
@@ -557,7 +557,7 @@ bool Chk_Access_Dorm_004_003() // ( 7, 3, 2, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_004_015_Huka() // ( 7, 15, 0, 0 )
+bool ChkDorm004_015_Huka() // ( 7, 15, 0, 0 )
 {
     OPEN_MSG_WIN();
     if ( BIT_CHK( 3584 ) == 1 )
@@ -605,7 +605,7 @@ bool Chk_Access_Dorm_004_015_Huka() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3083 );
-			Chk_Access_Dorm_015_ANY();
+			ChkDorm015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -617,7 +617,7 @@ bool Chk_Access_Dorm_004_015_Huka() // ( 7, 15, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_004_015_Aigis() // ( 7, 15, 0, 0 )
+bool ChkDorm004_015_Aigis() // ( 7, 15, 0, 0 )
 {
     OPEN_MSG_WIN();
     if ( BIT_CHK( 3584 ) == 1 )
@@ -647,7 +647,7 @@ bool Chk_Access_Dorm_004_015_Aigis() // ( 7, 15, 0, 0 )
         {
             CLOSE_MSG_WIN();
             BIT_ON( 3084 );
-			Chk_Access_Dorm_015_ANY();
+			ChkDorm015_ANY();
             FADE( 2, 0 );
             FADE_SYNC();
             CALL_FIELD( 7, 15, 0, 0 );
@@ -659,11 +659,11 @@ bool Chk_Access_Dorm_004_015_Aigis() // ( 7, 15, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_004_005() // ( 7, 5, 0, 0 )
+bool ChkDorm004_005() // ( 7, 5, 0, 0 )
 {
     if ( BIT_CHK( 3584 ) == 1 )
     {
-		Chk_Access_Dorm_015_ANY();
+		ChkDorm015_ANY();
 	    FADE( 2, 0 );
 		FADE_SYNC();
         BIT_ON( 15 );
@@ -673,7 +673,7 @@ bool Chk_Access_Dorm_004_005() // ( 7, 5, 0, 0 )
     }
     else if ( BIT_CHK( 3592 ) == 1 )
     {
-		Chk_Access_Dorm_015_ANY();
+		ChkDorm015_ANY();
 		FADE( 2, 0 );
 		FADE_SYNC();
         CALL_FIELD( 7, 5, 5, 0 );
@@ -682,12 +682,12 @@ bool Chk_Access_Dorm_004_005() // ( 7, 5, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_005_004() // ( 7, 4, 0, 0 )
+bool ChkDorm005_004() // ( 7, 4, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Dorm_005_006() // ( 7, 6, 0, 0 )
+bool ChkDorm005_006() // ( 7, 6, 0, 0 )
 {
     if ( !(( CHECK_TIME_SPAN( 4, 21, 1, 31 ) == 1 ) && ( BIT_CHK( 21 ) == 1 )) )
     {
@@ -699,7 +699,7 @@ bool Chk_Access_Dorm_005_006() // ( 7, 6, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
+bool ChkDorm006_005() // ( 7, 5, 2, 0 )
 {
     int var37;
     int var81;
@@ -817,7 +817,7 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
                 MSG( HUKA_LETS_GO_01 );
                 CLOSE_MSG_WIN();
                 BIT_ON( 3774 );
-				Chk_Access_Dorm_015_ANY();
+				ChkDorm015_ANY();
                 FADE( 2, 0 );
                 FADE_SYNC();
                 CALL_FIELD( 34, 1, 2, 0 );
@@ -867,7 +867,7 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
                 OPEN_MSG_WIN();
                 MSG( MSG1103_MITURU_02 );
                 CLOSE_MSG_WIN();
-				Chk_Access_Dorm_015_ANY();
+				ChkDorm015_ANY();
                 FADE( 2, 0 );
                 FADE_SYNC();
                 BIT_ON( 182 );
@@ -928,7 +928,7 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
             {
                 MSG( HUKA_LETS_GO_02 );
                 CLOSE_MSG_WIN();
-				Chk_Access_Dorm_015_ANY();
+				ChkDorm015_ANY();
                 FADE( 2, 0 );
                 FADE_SYNC();
                 BIT_ON( 207 );
@@ -981,17 +981,17 @@ bool Chk_Access_Dorm_006_005() // ( 7, 5, 2, 0 )
 	return 1;
 }
 
-bool Chk_Access_Dorm_005_007() // ( 7, 7, 0, 0 )
+bool ChkDorm005_007() // ( 7, 7, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Dorm_007_005() // ( 7, 5, 1, 0 )
+bool ChkDorm007_005() // ( 7, 5, 1, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Dorm_015_ANY() // Must be used as the last Chk_Access regardless of order
+bool ChkDorm015_ANY() // Must be used as the last Chk_Access regardless of order
 {
     if ( BIT_CHK( 3081 ) == 1 )
     {

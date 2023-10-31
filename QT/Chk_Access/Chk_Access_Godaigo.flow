@@ -1,60 +1,60 @@
-bool Chk_Access_Godaigo_002_003() // ( 14, 3, 1, 0 )
+bool ChkGoda002_003() // ( 14, 3, 1, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_003_002() // ( 14, 2, 0, 0 )
+bool ChkGoda003_002() // ( 14, 2, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_003_007() // ( 14, 7, 0, 0 )
+bool ChkGoda003_007() // ( 14, 7, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_007_003() // ( 14, 3, 3, 0 )
+bool ChkGoda007_003() // ( 14, 3, 3, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_003_008() // ( 14, 8, 0, 0 )
+bool ChkGoda003_008() // ( 14, 8, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_008_003() // ( 14, 3, 4, 0 )
+bool ChkGoda008_003() // ( 14, 3, 4, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_003_009() // ( 14, 9, 0, 0 )
+bool ChkGoda003_009() // ( 14, 9, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_009_003() // ( 14, 3, 5, 0 )
+bool ChkGoda009_003() // ( 14, 3, 5, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_003_010() // ( 14, 10, 0, 0 )
+bool ChkGoda003_010() // ( 14, 10, 0, 0 )
 {
 	return 1;
 }
 
 
-bool Chk_Access_Godaigo_010_003() // ( 14, 3, 6, 0 )
+bool ChkGoda010_003() // ( 14, 3, 6, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_003_004() // ( 14, 4, 0, 0 )
+bool ChkGoda003_004() // ( 14, 4, 0, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_Godaigo_004_003() // ( 14, 3, 0, 0 )
+bool ChkGoda004_003() // ( 14, 3, 0, 0 )
 {
 	return 1;
 }

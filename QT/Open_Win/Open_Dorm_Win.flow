@@ -1,4 +1,4 @@
-void Open_Dorm_Win_001()
+void OpenDorm001()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -9,9 +9,9 @@ void Open_Dorm_Win_001()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_001_003())
+			if(ChkDorm001_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -20,9 +20,9 @@ void Open_Dorm_Win_001()
 			}
 			break;
 		case 3: // 3F, Hallway
-			if(Chk_Access_Dorm_001_003())
+			if(ChkDorm001_003())
 			{
-				if(Chk_Access_Dorm_003_004())
+				if(ChkDorm003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -31,13 +31,13 @@ void Open_Dorm_Win_001()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_001_003())
+			if(ChkDorm001_003())
 			{
-				if(Chk_Access_Dorm_003_004())
+				if(ChkDorm003_004())
 				{
-					if(Chk_Access_Dorm_004_005())
+					if(ChkDorm004_005())
 					{
-						if(Chk_Access_Dorm_005_006())
+						if(ChkDorm005_006())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -48,13 +48,13 @@ void Open_Dorm_Win_001()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_001_003())
+			if(ChkDorm001_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
-					if(Chk_Access_Dorm_002_009())
+					if(ChkDorm002_009())
 					{
-						if(Chk_Access_Dorm_009_MAP())
+						if(ChkDorm009_MAP())
 						{
 							FADE( 1, 0 );
 							FADE_SYNC();
@@ -69,7 +69,7 @@ void Open_Dorm_Win_001()
 	}
 }
 
-void Open_Dorm_Win_002()
+void OpenDorm002()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -87,7 +87,7 @@ void Open_Dorm_Win_002()
 	switch (choice)
 	{
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_002_003())
+			if(ChkDorm002_003())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -95,9 +95,9 @@ void Open_Dorm_Win_002()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_002_003())
+			if(ChkDorm002_003())
 			{
-				if(Chk_Access_Dorm_003_001())
+				if(ChkDorm003_001())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -106,9 +106,9 @@ void Open_Dorm_Win_002()
 			}
 			break;
 		case 3: // 3F, Hallway
-			if(Chk_Access_Dorm_002_003())
+			if(ChkDorm002_003())
 			{
-				if(Chk_Access_Dorm_003_004())
+				if(ChkDorm003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -117,13 +117,13 @@ void Open_Dorm_Win_002()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_002_003())
+			if(ChkDorm002_003())
 			{
-				if(Chk_Access_Dorm_003_004())
+				if(ChkDorm003_004())
 				{
-					if(Chk_Access_Dorm_004_005())
+					if(ChkDorm004_005())
 					{
-						if(Chk_Access_Dorm_005_006())
+						if(ChkDorm005_006())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -134,9 +134,9 @@ void Open_Dorm_Win_002()
 			}
 				break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_002_009())
+			if(ChkDorm002_009())
 			{
-				if(Chk_Access_Dorm_009_MAP())
+				if(ChkDorm009_MAP())
 				{
 					FADE( 1, 0 );
 					FADE_SYNC();
@@ -149,7 +149,7 @@ void Open_Dorm_Win_002()
 	}
 }
 
-void Open_Dorm_Win_003()
+void OpenDorm003()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -167,7 +167,7 @@ void Open_Dorm_Win_003()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_003_002())
+			if(ChkDorm003_002())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -175,7 +175,7 @@ void Open_Dorm_Win_003()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_003_001())
+			if(ChkDorm003_001())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -183,7 +183,7 @@ void Open_Dorm_Win_003()
 			}
 			break;
 		case 3: // 3F, Hallway
-			if(Chk_Access_Dorm_003_004())
+			if(ChkDorm003_004())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -191,11 +191,11 @@ void Open_Dorm_Win_003()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_003_004())
+			if(ChkDorm003_004())
 			{
-				if(Chk_Access_Dorm_004_005())
+				if(ChkDorm004_005())
 				{
-					if(Chk_Access_Dorm_005_006())
+					if(ChkDorm005_006())
 					{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -205,11 +205,11 @@ void Open_Dorm_Win_003()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_003_002())
+			if(ChkDorm003_002())
 			{
-				if(Chk_Access_Dorm_002_009())
+				if(ChkDorm002_009())
 				{
-					if(Chk_Access_Dorm_009_MAP())
+					if(ChkDorm009_MAP())
 					{
 						FADE( 1, 0 );
 						FADE_SYNC();
@@ -223,7 +223,7 @@ void Open_Dorm_Win_003()
 	}
 }
 
-void Open_Dorm_Win_004()
+void OpenDorm004()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -241,9 +241,9 @@ void Open_Dorm_Win_004()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -252,7 +252,7 @@ void Open_Dorm_Win_004()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -260,9 +260,9 @@ void Open_Dorm_Win_004()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_003_001())
+				if(ChkDorm003_001())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -271,9 +271,9 @@ void Open_Dorm_Win_004()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_004_005())
+			if(ChkDorm004_005())
 			{
-				if(Chk_Access_Dorm_005_006())
+				if(ChkDorm005_006())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -282,13 +282,13 @@ void Open_Dorm_Win_004()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
-					if(Chk_Access_Dorm_002_009())
+					if(ChkDorm002_009())
 					{
-						if(Chk_Access_Dorm_009_MAP())
+						if(ChkDorm009_MAP())
 						{
 							FADE( 1, 0 );
 							FADE_SYNC();
@@ -303,7 +303,7 @@ void Open_Dorm_Win_004()
 	}
 }
 
-void Open_Dorm_Win_005()
+void OpenDorm005()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -314,11 +314,11 @@ void Open_Dorm_Win_005()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_005_004())
+			if(ChkDorm005_004())
 			{
-				if(Chk_Access_Dorm_004_003())
+				if(ChkDorm004_003())
 				{
-					if(Chk_Access_Dorm_003_002())
+					if(ChkDorm003_002())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -328,9 +328,9 @@ void Open_Dorm_Win_005()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_005_004())
+			if(ChkDorm005_004())
 			{
-				if(Chk_Access_Dorm_004_003())
+				if(ChkDorm004_003())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -339,11 +339,11 @@ void Open_Dorm_Win_005()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_005_004())
+			if(ChkDorm005_004())
 			{
-				if(Chk_Access_Dorm_004_003())
+				if(ChkDorm004_003())
 				{
-					if(Chk_Access_Dorm_003_001())
+					if(ChkDorm003_001())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -353,7 +353,7 @@ void Open_Dorm_Win_005()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_005_006())
+			if(ChkDorm005_006())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -361,15 +361,15 @@ void Open_Dorm_Win_005()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_005_004())
+			if(ChkDorm005_004())
 			{
-				if(Chk_Access_Dorm_004_003())
+				if(ChkDorm004_003())
 				{
-					if(Chk_Access_Dorm_003_002())
+					if(ChkDorm003_002())
 					{
-						if(Chk_Access_Dorm_002_009())
+						if(ChkDorm002_009())
 						{
-							if(Chk_Access_Dorm_009_MAP())
+							if(ChkDorm009_MAP())
 							{
 								FADE( 1, 0 );
 								FADE_SYNC();
@@ -385,7 +385,7 @@ void Open_Dorm_Win_005()
 	}
 }
 
-void Open_Dorm_Win_006()
+void OpenDorm006()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -396,13 +396,13 @@ void Open_Dorm_Win_006()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_006_005())
+			if(ChkDorm006_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
-						if(Chk_Access_Dorm_003_002())
+						if(ChkDorm003_002())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -413,11 +413,11 @@ void Open_Dorm_Win_006()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_006_005())
+			if(ChkDorm006_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -427,13 +427,13 @@ void Open_Dorm_Win_006()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_006_005())
+			if(ChkDorm006_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
-						if(Chk_Access_Dorm_003_001())
+						if(ChkDorm003_001())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -444,17 +444,17 @@ void Open_Dorm_Win_006()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_006_005())
+			if(ChkDorm006_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
-						if(Chk_Access_Dorm_003_002())
+						if(ChkDorm003_002())
 						{
-							if(Chk_Access_Dorm_002_009())
+							if(ChkDorm002_009())
 							{
-								if(Chk_Access_Dorm_009_MAP())
+								if(ChkDorm009_MAP())
 								{
 									FADE( 1, 0 );
 									FADE_SYNC();
@@ -471,7 +471,7 @@ void Open_Dorm_Win_006()
 	}
 }
 
-void Open_Dorm_Win_007()
+void OpenDorm007()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -482,13 +482,13 @@ void Open_Dorm_Win_007()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_007_005())
+			if(ChkDorm007_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
-						if(Chk_Access_Dorm_003_002())
+						if(ChkDorm003_002())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -499,11 +499,11 @@ void Open_Dorm_Win_007()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_007_005())
+			if(ChkDorm007_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -513,13 +513,13 @@ void Open_Dorm_Win_007()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_007_005())
+			if(ChkDorm007_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
-						if(Chk_Access_Dorm_003_001())
+						if(ChkDorm003_001())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -530,17 +530,17 @@ void Open_Dorm_Win_007()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_007_005())
+			if(ChkDorm007_005())
 			{
-				if(Chk_Access_Dorm_005_004())
+				if(ChkDorm005_004())
 				{
-					if(Chk_Access_Dorm_004_003())
+					if(ChkDorm004_003())
 					{
-						if(Chk_Access_Dorm_003_002())
+						if(ChkDorm003_002())
 						{
-							if(Chk_Access_Dorm_002_009())
+							if(ChkDorm002_009())
 							{
-								if(Chk_Access_Dorm_009_MAP())
+								if(ChkDorm009_MAP())
 								{
 									FADE( 1, 0 );
 									FADE_SYNC();
@@ -557,7 +557,7 @@ void Open_Dorm_Win_007()
 	}
 }
 
-void Open_Dorm_Win_009()
+void OpenDorm009()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -568,7 +568,7 @@ void Open_Dorm_Win_009()
 	switch (choice)
 	{
 		case 5: // Iwatodai Dorm
-			if(Chk_Access_Dorm_009_002())
+			if(ChkDorm009_002())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -576,7 +576,7 @@ void Open_Dorm_Win_009()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_009_MAP())
+			if(ChkDorm009_MAP())
 			{
 					FADE( 1, 0 );
 					FADE_SYNC();
@@ -588,7 +588,7 @@ void Open_Dorm_Win_009()
 	}
 }
 
-void Open_Dorm_Win_014()
+void OpenDorm014()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -606,9 +606,9 @@ void Open_Dorm_Win_014()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_014_003())
+			if(ChkDorm014_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -617,7 +617,7 @@ void Open_Dorm_Win_014()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_014_003())
+			if(ChkDorm014_003())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -625,9 +625,9 @@ void Open_Dorm_Win_014()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_014_003())
+			if(ChkDorm014_003())
 			{
-				if(Chk_Access_Dorm_003_001())
+				if(ChkDorm003_001())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -636,9 +636,9 @@ void Open_Dorm_Win_014()
 			}
 			break;
 		case 3: // 3F, Hallway
-			if(Chk_Access_Dorm_014_003())
+			if(ChkDorm014_003())
 			{
-				if(Chk_Access_Dorm_003_004())
+				if(ChkDorm003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -647,13 +647,13 @@ void Open_Dorm_Win_014()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_014_003())
+			if(ChkDorm014_003())
 			{
-				if(Chk_Access_Dorm_003_004())
+				if(ChkDorm003_004())
 				{
-					if(Chk_Access_Dorm_004_005())
+					if(ChkDorm004_005())
 					{
-						if(Chk_Access_Dorm_005_006())
+						if(ChkDorm005_006())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -664,13 +664,13 @@ void Open_Dorm_Win_014()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_014_003())
+			if(ChkDorm014_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
-					if(Chk_Access_Dorm_002_009())
+					if(ChkDorm002_009())
 					{
-						if(Chk_Access_Dorm_009_MAP())
+						if(ChkDorm009_MAP())
 						{
 							FADE( 1, 0 );
 							FADE_SYNC();
@@ -685,7 +685,7 @@ void Open_Dorm_Win_014()
 	}
 }
 
-void Open_Dorm_Win_015_Male()
+void OpenDorm015_Male()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -703,9 +703,9 @@ void Open_Dorm_Win_015_Male()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_003_002())
+			if(ChkDorm003_002())
 			{
-				if(Chk_Access_Dorm_015_ANY())
+				if(ChkDorm015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -714,9 +714,9 @@ void Open_Dorm_Win_015_Male()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_003_001())
+			if(ChkDorm003_001())
 			{
-				if(Chk_Access_Dorm_015_ANY())
+				if(ChkDorm015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -725,9 +725,9 @@ void Open_Dorm_Win_015_Male()
 			}
 			break;
 		case 3: // 3F, Hallway
-			if(Chk_Access_Dorm_003_004())
+			if(ChkDorm003_004())
 			{
-				if(Chk_Access_Dorm_015_ANY())
+				if(ChkDorm015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -736,13 +736,13 @@ void Open_Dorm_Win_015_Male()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_003_004())
+			if(ChkDorm003_004())
 			{
-				if(Chk_Access_Dorm_004_005())
+				if(ChkDorm004_005())
 				{
-					if(Chk_Access_Dorm_005_006())
+					if(ChkDorm005_006())
 					{
-						if(Chk_Access_Dorm_015_ANY())
+						if(ChkDorm015_ANY())
 						{
 							FADE( 2, 0 );
 							FADE_SYNC();
@@ -753,13 +753,13 @@ void Open_Dorm_Win_015_Male()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_003_002())
+			if(ChkDorm003_002())
 			{
-				if(Chk_Access_Dorm_002_009())
+				if(ChkDorm002_009())
 				{
-					if(Chk_Access_Dorm_009_MAP())
+					if(ChkDorm009_MAP())
 					{
-						if(Chk_Access_Dorm_015_ANY())
+						if(ChkDorm015_ANY())
 						{
 							FADE( 1, 0 );
 							FADE_SYNC();
@@ -774,7 +774,7 @@ void Open_Dorm_Win_015_Male()
 	}
 }
 
-void Open_Dorm_Win_015_Female()
+void OpenDorm015_Female()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -792,11 +792,11 @@ void Open_Dorm_Win_015_Female()
 	switch (choice)
 	{
 		case 0: // 1F, Lounge
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
-					if(Chk_Access_Dorm_015_ANY())
+					if(ChkDorm015_ANY())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -806,9 +806,9 @@ void Open_Dorm_Win_015_Female()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_015_ANY())
+				if(ChkDorm015_ANY())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -817,11 +817,11 @@ void Open_Dorm_Win_015_Female()
 			}
 			break;
 		case 2: // Your Room
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_003_001())
+				if(ChkDorm003_001())
 				{
-					if(Chk_Access_Dorm_015_ANY())
+					if(ChkDorm015_ANY())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -831,11 +831,11 @@ void Open_Dorm_Win_015_Female()
 			}
 			break;
 		case 4: // Meeting Room
-			if(Chk_Access_Dorm_004_005())
+			if(ChkDorm004_005())
 			{
-				if(Chk_Access_Dorm_005_006())
+				if(ChkDorm005_006())
 				{
-					if(Chk_Access_Dorm_015_ANY())
+					if(ChkDorm015_ANY())
 					{
 						FADE( 2, 0 );
 						FADE_SYNC();
@@ -845,15 +845,15 @@ void Open_Dorm_Win_015_Female()
 			}
 			break;
 		case 6: // Town Map
-			if(Chk_Access_Dorm_004_003())
+			if(ChkDorm004_003())
 			{
-				if(Chk_Access_Dorm_003_002())
+				if(ChkDorm003_002())
 				{
-					if(Chk_Access_Dorm_002_009())
+					if(ChkDorm002_009())
 					{
-						if(Chk_Access_Dorm_009_MAP())
+						if(ChkDorm009_MAP())
 						{
-							if(Chk_Access_Dorm_015_ANY())
+							if(ChkDorm015_ANY())
 							{
 								FADE( 1, 0 );
 								FADE_SYNC();

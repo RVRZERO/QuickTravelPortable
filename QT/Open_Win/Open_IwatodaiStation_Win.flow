@@ -1,4 +1,4 @@
-void Open_IwatodaiStation_Win_001()
+void OpenIwa001()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -17,7 +17,7 @@ void Open_IwatodaiStation_Win_001()
 	switch(choice)
 	{
 		case 0: // Iwatodai Station
-			if(Chk_Access_IwatodaiStation_001_002())
+			if(ChkIwa001_002())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -25,7 +25,7 @@ void Open_IwatodaiStation_Win_001()
 			}
 			break;
 		case 3: // Strip Mall, 2F
-			if(Chk_Access_IwatodaiStation_001_007())
+			if(ChkIwa001_007())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -33,7 +33,7 @@ void Open_IwatodaiStation_Win_001()
 			}
 			break;
 		case 4: // Town map
-			if(Chk_Access_IwatodaiStation_001_MAP())
+			if(ChkIwa001_MAP())
 			{
 				FADE( 1, 0 );
 				FADE_SYNC();
@@ -45,7 +45,7 @@ void Open_IwatodaiStation_Win_001()
 	}
 }
 
-void Open_IwatodaiStation_Win_002()
+void OpenIwa002()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -56,7 +56,7 @@ void Open_IwatodaiStation_Win_002()
 	switch(choice)
 	{
 		case 1: // Iwatodai Strip Mall
-			if(Chk_Access_IwatodaiStation_002_001())
+			if(ChkIwa002_001())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -64,7 +64,7 @@ void Open_IwatodaiStation_Win_002()
 			}
 			break;
 		case 4: // Town map
-			if(Chk_Access_IwatodaiStation_002_MAP())
+			if(ChkIwa002_MAP())
 			{
 				FADE( 1, 0 );
 				FADE_SYNC();
@@ -76,7 +76,7 @@ void Open_IwatodaiStation_Win_002()
 	}
 }
 
-void Open_IwatodaiStation_Win_007()
+void OpenIwa007()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -87,9 +87,9 @@ void Open_IwatodaiStation_Win_007()
 	switch(choice)
 	{
 		case 0: // Iwatodai Station
-			if(Chk_Access_IwatodaiStation_007_001())
+			if(ChkIwa007_001())
 			{
-				if(Chk_Access_IwatodaiStation_001_002())
+				if(ChkIwa001_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -98,7 +98,7 @@ void Open_IwatodaiStation_Win_007()
 			}
 			break;
 		case 2: // Strip Mall, 1F
-			if(Chk_Access_IwatodaiStation_007_001())
+			if(ChkIwa007_001())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -106,9 +106,9 @@ void Open_IwatodaiStation_Win_007()
 			}
 			break;
 		case 4: // Town map
-			if(Chk_Access_IwatodaiStation_007_001())
+			if(ChkIwa007_001())
 			{
-				if(Chk_Access_IwatodaiStation_001_MAP())
+				if(ChkIwa001_MAP())
 				{
 					FADE( 1, 0 );
 					FADE_SYNC();

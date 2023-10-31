@@ -1,4 +1,4 @@
-void Open_NaganakiShrine_Win_001()
+void OpenNaga001()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -8,7 +8,7 @@ void Open_NaganakiShrine_Win_001()
 	switch(choice)
 	{
 		case 0: // Town Map
-			if(Chk_Access_NaganakiShrine_001_MAP())
+			if(ChkNaga001_MAP())
 			{
 				FADE( 1, 0 );
 				FADE_SYNC();

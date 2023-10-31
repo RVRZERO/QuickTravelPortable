@@ -1,4 +1,4 @@
-bool Chk_Access_NaganakiShrine_001_MAP()
+bool ChkNaga001_MAP()
 {
     if ( ( GET_MONTH() == 1 ) && ( GET_DAY_OF_MONTH() == 1 ) )
     {

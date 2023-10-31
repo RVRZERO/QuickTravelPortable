@@ -1,4 +1,4 @@
-void Open_Godaigo_Win_002()
+void OpenGoda002()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -9,7 +9,7 @@ void Open_Godaigo_Win_002()
 	switch(choice)
 	{
 		case 1: // 2F, Hallway
-			if(Chk_Access_Godaigo_002_003())
+			if(ChkGoda002_003())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -17,9 +17,9 @@ void Open_Godaigo_Win_002()
 			}
 			break;
 		case 2: // 3F, Hallway
-			if(Chk_Access_Godaigo_002_003())
+			if(ChkGoda002_003())
 			{
-				if(Chk_Access_Godaigo_003_004())
+				if(ChkGoda003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -32,7 +32,7 @@ void Open_Godaigo_Win_002()
 	}
 }
 
-void Open_Godaigo_Win_003()
+void OpenGoda003()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -43,7 +43,7 @@ void Open_Godaigo_Win_003()
 	switch(choice)
 	{
 		case 0: // 1F Lobby
-			if(Chk_Access_Godaigo_003_002())
+			if(ChkGoda003_002())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -51,7 +51,7 @@ void Open_Godaigo_Win_003()
 			}
 			break;
 		case 2: // 3F, Hallway
-			if(Chk_Access_Godaigo_003_004())
+			if(ChkGoda003_004())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -63,7 +63,7 @@ void Open_Godaigo_Win_003()
 	}
 }
 
-void Open_Godaigo_Win_004()
+void OpenGoda004()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -74,9 +74,9 @@ void Open_Godaigo_Win_004()
 	switch(choice)
 	{
 		case 0: // 1F Lobby
-			if(Chk_Access_Godaigo_004_003())
+			if(ChkGoda004_003())
 			{
-				if(Chk_Access_Godaigo_003_002())
+				if(ChkGoda003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -85,7 +85,7 @@ void Open_Godaigo_Win_004()
 			}
 			break;
 		case 1: // 2F, Hallway
-			if(Chk_Access_Godaigo_004_003())
+			if(ChkGoda004_003())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -97,7 +97,7 @@ void Open_Godaigo_Win_004()
 	}
 }
 
-void Open_Godaigo_Win_007()
+void OpenGoda007()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -108,9 +108,9 @@ void Open_Godaigo_Win_007()
 	switch(choice)
 	{
 		case 0: // 1F Lobby
-			if(Chk_Access_Godaigo_007_003())
+			if(ChkGoda007_003())
 			{
-				if(Chk_Access_Godaigo_003_002())
+				if(ChkGoda003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -119,9 +119,9 @@ void Open_Godaigo_Win_007()
 			}
 			break;
 		case 2: // 3F, Hallway
-			if(Chk_Access_Godaigo_007_003())
+			if(ChkGoda007_003())
 			{
-				if(Chk_Access_Godaigo_003_004())
+				if(ChkGoda003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -134,7 +134,7 @@ void Open_Godaigo_Win_007()
 	}
 }
 
-void Open_Godaigo_Win_008()
+void OpenGoda008()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -145,9 +145,9 @@ void Open_Godaigo_Win_008()
 	switch(choice)
 	{
 		case 0: // 1F Lobby
-			if(Chk_Access_Godaigo_008_003())
+			if(ChkGoda008_003())
 			{
-				if(Chk_Access_Godaigo_003_002())
+				if(ChkGoda003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -156,9 +156,9 @@ void Open_Godaigo_Win_008()
 			}
 			break;
 		case 2: // 3F, Hallway
-			if(Chk_Access_Godaigo_008_003())
+			if(ChkGoda008_003())
 			{
-				if(Chk_Access_Godaigo_003_004())
+				if(ChkGoda003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -171,7 +171,7 @@ void Open_Godaigo_Win_008()
 	}
 }
 
-void Open_Godaigo_Win_009()
+void OpenGoda009()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -182,9 +182,9 @@ void Open_Godaigo_Win_009()
 	switch(choice)
 	{
 		case 0: // 1F Lobby
-			if(Chk_Access_Godaigo_009_003())
+			if(ChkGoda009_003())
 			{
-				if(Chk_Access_Godaigo_003_002())
+				if(ChkGoda003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -193,9 +193,9 @@ void Open_Godaigo_Win_009()
 			}
 			break;
 		case 2: // 3F, Hallway
-			if(Chk_Access_Godaigo_009_003())
+			if(ChkGoda009_003())
 			{
-				if(Chk_Access_Godaigo_003_004())
+				if(ChkGoda003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -208,7 +208,7 @@ void Open_Godaigo_Win_009()
 	}
 }
 
-void Open_Godaigo_Win_010()
+void OpenGoda010()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -219,9 +219,9 @@ void Open_Godaigo_Win_010()
 	switch(choice)
 	{
 		case 0: // 1F Lobby
-			if(Chk_Access_Godaigo_010_003())
+			if(ChkGoda010_003())
 			{
-				if(Chk_Access_Godaigo_003_002())
+				if(ChkGoda003_002())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -230,9 +230,9 @@ void Open_Godaigo_Win_010()
 			}
 			break;
 		case 2: // 3F, Hallway
-			if(Chk_Access_Godaigo_010_003())
+			if(ChkGoda010_003())
 			{
-				if(Chk_Access_Godaigo_003_004())
+				if(ChkGoda003_004())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();

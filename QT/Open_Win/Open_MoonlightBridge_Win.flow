@@ -1,4 +1,4 @@
-void Open_MoonlightBridge_Win_001()
+void OpenMoon001()
 {
 	boss_battle_r();
 }

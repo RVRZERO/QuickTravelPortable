@@ -1,4 +1,4 @@
-void Open_Tartarus_Win_002()
+void OpenTart002()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );

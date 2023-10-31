@@ -1,4 +1,4 @@
-void Open_Dorm_F_Win_ALL()
+void OpenDormFALL()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );

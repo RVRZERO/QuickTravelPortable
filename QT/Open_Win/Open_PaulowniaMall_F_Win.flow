@@ -1,4 +1,4 @@
-void Open_PaulowniaMall_F_Win_001()
+void OpenPaulF001()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );

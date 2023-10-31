@@ -1,4 +1,4 @@
-void Open_PaulowniaMall_Win_001()
+void OpenPaul001()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -9,7 +9,7 @@ void Open_PaulowniaMall_Win_001()
 	switch (choice)
 	{
 		case 1: // Back Alley
-			if(Chk_Access_PaulowniaMall_001_009())
+			if(ChkPaul001_009())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -17,7 +17,7 @@ void Open_PaulowniaMall_Win_001()
 			}
 			break;
 		case 2:	// Town Map
-			if(Chk_Access_PaulowniaMall_001_MAP())
+			if(ChkPaul001_MAP())
 			{
 				FADE( 1, 0 );
 				FADE_SYNC();
@@ -29,7 +29,7 @@ void Open_PaulowniaMall_Win_001()
 	}
 }
 
-void Open_PaulowniaMall_Win_002()
+void OpenPaul002()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -39,7 +39,7 @@ void Open_PaulowniaMall_Win_002()
 	switch (choice)
 	{
 		case 0: // Paulownia Mall
-			if(Chk_Access_PaulowniaMall_002_001())
+			if(ChkPaul002_001())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -47,9 +47,9 @@ void Open_PaulowniaMall_Win_002()
 			}
 			break;
 		case 1: // Back Alley
-			if(Chk_Access_PaulowniaMall_002_001())
+			if(ChkPaul002_001())
 			{
-				if(Chk_Access_PaulowniaMall_001_009())
+				if(ChkPaul001_009())
 				{
 					FADE( 2, 0 );
 					FADE_SYNC();
@@ -58,9 +58,9 @@ void Open_PaulowniaMall_Win_002()
 			}
 			break;
 		case 2:	// Town Map
-			if(Chk_Access_PaulowniaMall_002_001())
+			if(ChkPaul002_001())
 			{
-				if(Chk_Access_PaulowniaMall_001_MAP())
+				if(ChkPaul001_MAP())
 				{
 					FADE( 1, 0 );
 					FADE_SYNC();
@@ -73,7 +73,7 @@ void Open_PaulowniaMall_Win_002()
 	}
 }
 
-void Open_PaulowniaMall_Win_009()
+void OpenPaul009()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
@@ -84,7 +84,7 @@ void Open_PaulowniaMall_Win_009()
 	switch (choice)
 	{
 		case 0: // Paulownia Mall
-			if(Chk_Access_PaulowniaMall_009_001())
+			if(ChkPaul009_001())
 			{
 				FADE( 2, 0 );
 				FADE_SYNC();
@@ -92,9 +92,9 @@ void Open_PaulowniaMall_Win_009()
 			}
 			break;
 		case 2:	// Town Map
-			if(Chk_Access_PaulowniaMall_009_001())
+			if(ChkPaul009_001())
 			{
-				if(Chk_Access_PaulowniaMall_001_MAP())
+				if(ChkPaul001_MAP())
 				{
 					FADE( 1, 0 );
 					FADE_SYNC();

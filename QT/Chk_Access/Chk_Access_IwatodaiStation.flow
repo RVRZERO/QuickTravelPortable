@@ -1,4 +1,4 @@
-bool Chk_Access_IwatodaiStation_001_MAP()
+bool ChkIwa001_MAP()
 {
     if ( ( ( GET_MONTH() == 10 ) && ( GET_DAY_OF_MONTH() == 4 ) ) && ( FUNCTION_0083() == 8 ) )
     {
@@ -11,13 +11,13 @@ bool Chk_Access_IwatodaiStation_001_MAP()
 	return 1;
 }
 
-bool Chk_Access_IwatodaiStation_002_MAP()
+bool ChkIwa002_MAP()
 {
 	BIT_ON( 3093 );
 	return 1;
 }
 
-bool Chk_Access_IwatodaiStation_001_002() // ( 9, 2, 0, 0 )
+bool ChkIwa001_002() // ( 9, 2, 0, 0 )
 {
 	int var18;
     gVar21 = 0;
@@ -175,12 +175,12 @@ bool Chk_Access_IwatodaiStation_001_002() // ( 9, 2, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_IwatodaiStation_002_001() // ( 9, 1, 1, 0 )
+bool ChkIwa002_001() // ( 9, 1, 1, 0 )
 {
 	return 1;
 }
 
-bool Chk_Access_IwatodaiStation_001_007() // ( 9, 7, 0, 0 )
+bool ChkIwa001_007() // ( 9, 7, 0, 0 )
 {
     if ( ( ( GET_MONTH() == 10 ) && ( GET_DAY_OF_MONTH() == 4 ) ) && ( FUNCTION_0083() == 8 ) )
     {
@@ -192,7 +192,7 @@ bool Chk_Access_IwatodaiStation_001_007() // ( 9, 7, 0, 0 )
 	return 1;
 }
 
-bool Chk_Access_IwatodaiStation_007_001() // ( 9, 1, 7, 0 )
+bool ChkIwa007_001() // ( 9, 1, 7, 0 )
 {
 	return 1;
 }

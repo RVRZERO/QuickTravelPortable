@@ -2,7 +2,7 @@
 [f 0 8 65278][f 1 31]> Where do you want to go?[e]
 
 [msg Stop_QuickTravel]
-[f 0 8 65278][f 1 31]> You can't fast travel right now.[n][f 0 4][e]
+[f 0 8 65278][f 1 31]> You can't quick travel right now.[n][f 0 4][e]
 
 [sel Dorm_F top]
 [f 0 8 65278][f 1 31]1F, Lounge[e]

@@ -1,4 +1,4 @@
-void Open_YakushimaBeach_Win_ALL()
+void OpenYakuALL()
 {
-	Chk_Access_YakushimaBeach_001_OUT();
+	ChkYaku001_OUT();
 }

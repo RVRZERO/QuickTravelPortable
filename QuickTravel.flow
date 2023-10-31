@@ -26,41 +26,41 @@ import ("QT/Open_Win/Open_YakushimaBeach_Win.flow");
 import ("QT/Open_Win/Open_MoonlightBridge_Win.flow");
 import ("QT/Open_Win/Open_Win.msg");
 
-void QuickTravelDisplay()
+void QtDisplay()
 {
 	switch(GET_FIELD_MAJOR())
 	{
 		case 4: // Dorm (The Answer)
-			QuickTravel_Dorm_F();
+			QtDormF();
 			break;
 		case 5: // Paulownia Mall (The Answer)
-			QuickTravel_PaulowniaMall_F();
+			QtPaulF();
 			break;
 		case 6: // Gekkoukan High
-			QuickTravel_GekkoukanHigh();
+			QtGek();
 			break;
 		case 7: // Dorm
-			QuickTravel_Dorm();
+			QtDorm();
 			break;
 		case 8: // Paulownia Mall
-			QuickTravel_PaulowniaMall();
+			QtPaul();
 			break;
 		case 9: // Iwatodai Station
-			QuickTravel_IwatodaiStation();
+			QtIwa();
 			break;
 		case 10: // Port Island Station
-			QuickTravel_PortIslandStation();
+			QtPort();
 			break;
 		case 12: // Naganaki Shrine
-			QuickTravel_NaganakiShrine();
+			QtNaga();
 			break;
 		case 14: // Godaigo (Kyoto Trip)
-			QuickTravel_Godaigo();
+			QtGoda();
 			break;
 		case 32: // Tartarus
 			if(GET_FLOOR_ID() == 1)
 			{
-				QuickTravel_Tartarus();
+				QtTart();
 			}
 			else
 			{
@@ -68,10 +68,10 @@ void QuickTravelDisplay()
 			}
 			break;
 		case 33: // Yakushima Beach
-			QuickTravel_YakushimaBeach();
+			QtYaku();
 			break;
 		case 37: // Moonlight Bridge
-			QuickTravel_MoonlightBridge();
+			QtMoon();
 			break;
 		default:
 			field_order_party_unhooked();
@@ -79,24 +79,24 @@ void QuickTravelDisplay()
 	}
 }
 
-void No_QuickTravel()
+void NoQt()
 {
 	OPEN_MSG_WIN();
 	MSG( Stop_QuickTravel );
 	CLOSE_MSG_WIN();
 }
 
-void QuickTravel_Dorm_F()
+void QtDormF()
 {
-	Open_Dorm_F_Win_ALL();
+	OpenDormFALL();
 }
 
-void QuickTravel_PaulowniaMall_F()
+void QtPaulF()
 {
-	Open_PaulowniaMall_F_Win_001();
+	OpenPaulF001();
 }
 
-void QuickTravel_GekkoukanHigh()
+void QtGek()
 {
 	if( ( BIT_CHK( 3680 ) ) == 1 && ( BIT_CHK( 72 ) == 1 ) )
 	{
@@ -107,226 +107,226 @@ void QuickTravel_GekkoukanHigh()
 	}
 	else if( BIT_CHK( 3680 ) == 1 )
 	{
-		Chk_Access_GekkoukanHigh_004_005();
+		ChkGek004_005();
 		return;
 	}
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // 1F, Main Lobby
-			Open_GekkoukanHigh_Win_001();
+			OpenGek001();
 			break;
 		case 2: // School Entranceway
-			Open_GekkoukanHigh_Win_002();
+			OpenGek002();
 			break;
 		case 3: // Classroom
-			Open_GekkoukanHigh_Win_003();
+			OpenGek003();
 			break;
 		case 4: // 2F, Hallway
-			Open_GekkoukanHigh_Win_004();
+			OpenGek004();
 			break;
 		case 5: // Rooftop
-			Open_GekkoukanHigh_Win_005();
+			OpenGek005();
 			break;
 		case 7: // 1F, Faculty Office Hallway
-			Open_GekkoukanHigh_Win_007();
+			OpenGek007();
 			break;
 		case 11: // 1F, Laboratory Hallway
-			Open_GekkoukanHigh_Win_011();
+			OpenGek011();
 			break;
 		case 16: // 1F, Corridor
-			Open_GekkoukanHigh_Win_016();
+			OpenGek016();
 			break;
 		case 20: // 1F, Sport Clubs Hallway
-			Open_GekkoukanHigh_Win_020();
+			OpenGek020();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_Dorm()
+void QtDorm()
 {
 	bool male = ( BIT_CHK( 3081 ) == 1 ) || ( BIT_CHK( 3082 ) == 1 );
 	bool female = ( BIT_CHK( 3084 ) == 1 ) || ( BIT_CHK( 3083 ) == 1 ); 
 	bool operation = ( FUNCTION_0083() == 8 ) && ( ( ( GET_MONTH() == 7 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 11 ) && ( GET_DAY_OF_MONTH() == 3 ) ) || ( ( GET_MONTH() == 11 ) && ( GET_DAY_OF_MONTH() == 22 ) ) );
 	if( BIT_CHK( 3584 ) == 1 )
 	{
-		Chk_Access_Dorm_003_015_Junpei();
+		ChkDorm003_015_Junpei();
 		return;
 	}
 	if(operation)
 	{
-		Chk_Access_Dorm_006_005();
+		ChkDorm006_005();
 		return;
 	}
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // Your Room
-			Open_Dorm_Win_001();
+			OpenDorm001();
 			break;
 		case 2: // 1F, Lounge
-			Open_Dorm_Win_002();
+			OpenDorm002();
 			break;
 		case 3: // 2F, Hallway
-			Open_Dorm_Win_003();
+			OpenDorm003();
 			break;
 		case 4: // 3F, Hallway
-			Open_Dorm_Win_004();
+			OpenDorm004();
 			break;
 		case 5: // 4F, Hallway
-			Open_Dorm_Win_005();
+			OpenDorm005();
 			break;
 		case 6: // Meeting Room
-			Open_Dorm_Win_006();
+			OpenDorm006();
 			break;
 		case 7: // 5F, Hallway
-			Open_Dorm_Win_007();
+			OpenDorm007();
 			break;
 		case 9: // Dorm Entrance
-			Open_Dorm_Win_009();
+			OpenDorm009();
 			break;
 		case 14: // Vacant Room (Shinjiro)
-			Open_Dorm_Win_014();
+			OpenDorm014();
 		case 15: // Vacant Room (Junpei, Ken, Fuuka, & Aigis)
 			if(male)
 			{
-				Open_Dorm_Win_015_Male();
+				OpenDorm015_Male();
 			}
 			else if(female)
 			{
-				Open_Dorm_Win_015_Female();
+				OpenDorm015_Female();
 			}
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 		}
 }
 
-void QuickTravel_PaulowniaMall()
+void QtPaul()
 {
 	bool operation = ( GET_MONTH() == 9 ) && ( GET_DAY_OF_MONTH() == 5 ) && ( FUNCTION_0083() == 8 );
 	if(operation)
 	{
-		Chk_Access_PaulowniaMall_001_002();
+		ChkPaul001_002();
 		return;
 	}
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // Paulownia Mall
-			Open_PaulowniaMall_Win_001();
+			OpenPaul001();
 			break;
 		case 2: // Club Escapade
-			Open_PaulowniaMall_Win_002();
+			OpenPaul002();
 			break;
 		case 9: // Back Alley
-			Open_PaulowniaMall_Win_009();
+			OpenPaul009();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_IwatodaiStation()
+void QtIwa()
 {
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // Iwatodai Strip Mall
-			Open_IwatodaiStation_Win_001();
+			OpenIwa001();
 			break;
 		case 2: // Iwatodai Station
-			Open_IwatodaiStation_Win_002();
+			OpenIwa002();
 			break;
 		case 7: // Strip Mall, 2F
-			Open_IwatodaiStation_Win_007();
+			OpenIwa007();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_PortIslandStation()
+void QtPort()
 {
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // 
-			Open_PortIslandStation_Win_001();
+			OpenPort001();
 			break;
 		case 2: // 
-			Open_PortIslandStation_Win_002();
+			OpenPort002();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_NaganakiShrine()
+void QtNaga()
 {
 	switch(GET_FIELD_MINOR())
 	{
 		case 1: // Naganaki Shrine
-			Open_NaganakiShrine_Win_001();
+			OpenNaga001();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_Godaigo()
+void QtGoda()
 {
 	switch(GET_FIELD_MINOR())
 	{
 		case 2: // 1F Lobby
-			Open_Godaigo_Win_002();
+			OpenGoda002();
 			break;
 		case 3: // 2F Hallway
-			Open_Godaigo_Win_003();
+			OpenGoda003();
 			break;
 		case 4: // 3F Hallway
-			Open_Godaigo_Win_004();
+			OpenGoda004();
 			break;
 		case 7: // 3F Hallway
-			Open_Godaigo_Win_007();
+			OpenGoda007();
 			break;
 		case 8: // 3F Hallway
-			Open_Godaigo_Win_008();
+			OpenGoda008();
 			break;
 		case 9: // 3F Hallway
-			Open_Godaigo_Win_009();
+			OpenGoda009();
 			break;
 		case 10: // 3F Hallway
-			Open_Godaigo_Win_010();
+			OpenGoda010();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_Tartarus()
+void QtTart()
 {
 	switch(GET_FIELD_MINOR())
 	{
 		case 2: // Tartarus, Entrance
-			Open_Tartarus_Win_002();
+			OpenTart002();
 			break;
 		default:
-			No_QuickTravel();
+			NoQt();
 			break;
 	}
 }
 
-void QuickTravel_YakushimaBeach()
+void QtYaku()
 {
-	Open_YakushimaBeach_Win_ALL();
+	OpenYakuALL();
 }
 
-void QuickTravel_MoonlightBridge()
+void QtMoon()
 {
-	Open_MoonlightBridge_Win_001();
+	OpenMoon001();
 }
