@@ -74,7 +74,7 @@ void Open_Dorm_Win_002()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
 		SET_MASK( 49 );
 	}
@@ -154,7 +154,7 @@ void Open_Dorm_Win_003()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
 		SET_MASK( 50 );
 	}
@@ -228,7 +228,7 @@ void Open_Dorm_Win_004()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
 		SET_MASK( 50 );
 	}
@@ -585,7 +585,7 @@ void Open_Dorm_Win_014()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
 		SET_MASK( 50 );
 	}
@@ -682,7 +682,7 @@ void Open_Dorm_Win_015_Male()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
 		SET_MASK( 50 );
 	}
@@ -771,7 +771,7 @@ void Open_Dorm_Win_015_Female()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 18 ) ) )
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
 		SET_MASK( 56 );
 	}
