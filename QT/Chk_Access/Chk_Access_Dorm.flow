@@ -24,40 +24,37 @@ bool ChkDorm009_002() // ( 7, 2, 0, 0 )
             MSG( GOINTO_HOME );
             CLOSE_MSG_WIN();
             MSG_HELP( HELP_GOINTO_HOME );
-            OPEN_MSG_WIN();
-            MSG( GOINTO_HOME_OK );
-            SEL_CHK_PAD( 6, 1 );
-            if ( SEL( INTO_HOME_SEL ) != 0 )
-            {
-                CLOSE_MSG_WIN();
-                return 0;
-            }
-            CLOSE_MSG_WIN();
-            BIT_ON( 3085 );
         }
+		OPEN_MSG_WIN();
+		MSG( GOINTO_HOME_OK );
+		SEL_CHK_PAD( 6, 1 );
+		if ( SEL( INTO_HOME_SEL ) != 0 )
+		{
+			CLOSE_MSG_WIN();
+			return 0;
+		}
+		CLOSE_MSG_WIN();
+		if ( ( CHECK_TIME_SPAN( 4, 21, 1, 31 ) == 1 ) && ( BIT_CHK( 3085 ) == 0 ) )
+		{
+			BIT_ON( 3085 );
+		}
     }
     if ( var14 == 1 )
     {
-		OPEN_MSG_WIN();
-		MSG( GOINTO_HOME_OK );
-		SEL_CHK_PAD( 6, 20 );
-		if( SEL( INTO_HOME_SEL ) == 0 )
-		{
-			CLOSE_MSG_WIN();
-			ChkDorm015_ANY();
-			FADE( 1, 0 );
-			FADE_SYNC();
-			NEXT_DAY();
-			return 0;
-		}
-		else
-		{
-			CLOSE_MSG_WIN();
-			return 0;
-		}
-    }
+		ChkDorm015_ANY();
+		FADE( 1, 0 );
+		FADE_SYNC();
+		NEXT_DAY();
+		return 0;
+	}
+	else
+	{
+		CLOSE_MSG_WIN();
+		return 0;
+	}
 	return 1;
 }
+	
 
 bool ChkDorm002_009() // ( 7, 9, 0, 0 )
 {
@@ -134,29 +131,20 @@ bool ChkDorm002_009() // ( 7, 9, 0, 0 )
         if ( BIT_CHK( 3094 ) == 0 )
         {
             MSG_HELP( GO_OUT_OK_HELP );
-            OPEN_MSG_WIN();
-            MSG( GO_OUT_OK );
-            SEL_CHK_PAD( 6, 1 );
-            if ( SEL( GOOUT_SEL ) == 1 )
-            {
-                CLOSE_MSG_WIN();
-                return 0;
-            }
-            BIT_ON( 3094 );
-            CLOSE_MSG_WIN();
         }
-		else
-		{
-			OPEN_MSG_WIN();
-			MSG( GO_OUT_OK );
-			SEL_CHK_PAD( 6, 20 );
-			if( SEL( GOOUT_SEL ) == 1 )
-			{
-				CLOSE_MSG_WIN();
-				return 0;
-			}
-			CLOSE_MSG_WIN();
-		}
+        OPEN_MSG_WIN();
+        MSG( GO_OUT_OK );
+        SEL_CHK_PAD( 6, 1 );
+        if ( SEL( GOOUT_SEL ) == 1 )
+        {
+            CLOSE_MSG_WIN();
+            return 0;
+        }
+        if ( BIT_CHK( 3094 ) == 0 )
+        {
+            BIT_ON( 3094 );
+        }
+		CLOSE_MSG_WIN();
     }
 	return 1;
 }
@@ -215,7 +203,6 @@ bool ChkDorm003_001() // ( 7, 1, 0, 0 )
                 MSG( GOINTO_MYROOM );
                 CLOSE_MSG_WIN();
                 MSG_HELP( HELP_GOINTO_MYROOM );
-				return 0;
             }
         }
         OPEN_MSG_WIN();
