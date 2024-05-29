@@ -47,11 +47,6 @@ bool ChkDorm009_002() // ( 7, 2, 0, 0 )
 		NEXT_DAY();
 		return 0;
 	}
-	else
-	{
-		CLOSE_MSG_WIN();
-		return 0;
-	}
 	return 1;
 }
 	
