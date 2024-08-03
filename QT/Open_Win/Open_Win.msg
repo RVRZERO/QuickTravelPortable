@@ -9,8 +9,10 @@
 [f 0 8 65278][f 1 31]Desert of Doors[e]
 [f 0 8 65278][f 1 31]Velvet Room[e]
 [f 0 8 65278][f 1 31]Paulownia Mall[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel PaulowniaMall_F top]
+[f 0 8 65278][f 1 31]Paulownia Mall[e]
 [f 0 8 65278][f 1 31]Iwatodai Dorm[e]
 [f 0 8 65278][f 1 31]Cancel[e]
 
@@ -21,6 +23,7 @@
 [f 0 8 65278][f 1 31]2F, Classroom Hallway[e]
 [f 0 8 65278][f 1 31]Classroom[e]
 [f 0 8 65278][f 1 31]Town Map[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel Dorm top]
 [f 0 8 65278][f 1 31]1F, Lounge[e]
@@ -30,11 +33,14 @@
 [f 0 8 65278][f 1 31]Meeting Room[e]
 [f 0 8 65278][f 1 31]Iwatodai Dorm[e]
 [f 0 8 65278][f 1 31]Town Map[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel PaulowniaMall top]
 [f 0 8 65278][f 1 31]Paulownia Mall[e]
 [f 0 8 65278][f 1 31]Back Alley[e]
+[f 0 8 65278][f 1 31]Club Escapade[e]
 [f 0 8 65278][f 1 31]Town Map[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel IwatodaiStation top]
 [f 0 8 65278][f 1 31]Iwatodai Station[e]
@@ -42,13 +48,16 @@
 [f 0 8 65278][f 1 31]Strip Mall, 1F[e]
 [f 0 8 65278][f 1 31]Strip Mall, 2F[e]
 [f 0 8 65278][f 1 31]Town map[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel PortIslandStation top]
 [f 0 8 65278][f 1 31]Port Island Station[e]
 [f 0 8 65278][f 1 31]Station Outskirts[e]
 [f 0 8 65278][f 1 31]Town Map[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel NaganakiShrine top]
+[f 0 8 65278][f 1 31]Naganaki Shrine[e]
 [f 0 8 65278][f 1 31]Town map[e]
 [f 0 8 65278][f 1 31]Cancel[e]
 
@@ -56,10 +65,11 @@
 [f 0 8 65278][f 1 31]1F Lobby[e]
 [f 0 8 65278][f 1 31]2F Hallway[e]
 [f 0 8 65278][f 1 31]3F Hallway[e]
+[f 0 8 65278][f 1 31]Cancel[e]
 
 [sel Tartarus top]
 [f 0 8 65278][f 1 31]Tartarus[e]
 [f 0 8 65278][f 1 31]Velvet Room[e]
 [f 0 8 65278][f 1 31]Teleporter[e]
 [f 0 8 65278][f 1 31]Outside[e]
-
+[f 0 8 65278][f 1 31]Cancel[e]

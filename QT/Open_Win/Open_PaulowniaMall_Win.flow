@@ -3,11 +3,19 @@ void OpenPaul001()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 1 );
+	if ( FUNCTION_0083() != 6 )
+	{
+		SET_MASK( 4 );
+	}
 	int choice = SEL( PaulowniaMall );
 	CLOSE_MSG_WIN();
 	switch (choice)
 	{
+		case 0: // Paulownia Mall
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 8, 1, 1, 0 );
+			break;
 		case 1: // Back Alley
 			if(ChkPaul001_009())
 			{
@@ -16,13 +24,23 @@ void OpenPaul001()
 				CALL_FIELD( 8, 9, 0, 0 );
 			}
 			break;
-		case 2:	// Town Map
+		case 2: // Club Escapade
+			if(ChkPaul001_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 8, 2, 0, 0 );
+			}
+			break;
+		case 3:	// Town Map
 			if(ChkPaul001_MAP())
 			{
 				FADE( 1, 0 );
 				FADE_SYNC();
 				CALL_MAP( 1 );
 			}
+			break;
+		case 4: // Cancel
 			break;
 		default:
 			break;
@@ -57,7 +75,12 @@ void OpenPaul002()
 				}
 			}
 			break;
-		case 2:	// Town Map
+		case 2: // Club Escapade
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 8, 2, 0, 0 );
+			break;
+		case 3:	// Town Map
 			if(ChkPaul002_001())
 			{
 				if(ChkPaul001_MAP())
@@ -67,6 +90,8 @@ void OpenPaul002()
 					CALL_MAP( 1 );
 				}
 			}
+			break;
+		case 4: // Cancel
 			break;
 		default:
 			break;
@@ -78,7 +103,10 @@ void OpenPaul009()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 2 );
+	if ( FUNCTION_0083() != 6 )
+	{
+		SET_MASK( 4 );
+	}
 	int choice = SEL( PaulowniaMall );
 	CLOSE_MSG_WIN();
 	switch (choice)
@@ -91,7 +119,23 @@ void OpenPaul009()
 				CALL_FIELD( 8, 1, 7, 0 );
 			}
 			break;
-		case 2:	// Town Map
+		case 1: // Back Alley
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 8, 9, 0, 0 );
+			break;
+		case 2: // Club Escapade
+			if(ChkPaul009_001())
+			{
+				if(ChkPaul001_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 8, 2, 0, 0 );
+				}
+			}
+			break;
+		case 3:	// Town Map
 			if(ChkPaul009_001())
 			{
 				if(ChkPaul001_MAP())
@@ -101,6 +145,8 @@ void OpenPaul009()
 					CALL_MAP( 1 );
 				}
 			}
+			break;
+		case 4: // Cancel
 			break;
 		default:
 			break;

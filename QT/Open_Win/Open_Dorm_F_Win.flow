@@ -1,19 +1,46 @@
+void OpenDormF010()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( BIT_CHK( 721 ) == 0 )
+	{
+		SET_MASK( 8 );
+	}
+	int choice = SEL( Dorm_F );
+	CLOSE_MSG_WIN();
+	switch(choice)
+	{
+		
+		case 0: // 1F, Lobby
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 4, 10, 4, 0 );
+			break;
+		case 1: // Desert of Doors
+			entrance_to_dungeon();
+			break;
+		case 2: // Velvet Room
+			entrance_to_velvetroom();
+			break;
+		case 3: // Paulownia Mall
+			counter_door();
+			break;
+		case 4: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
 void OpenDormFALL()
 {
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	if( ( BIT_CHK( 721 ) == 0 ) && ( GET_FIELD_MINOR() == 10 ) )
-	{
-		SET_MASK( 9 );
-	}
-	else if( BIT_CHK( 721 ) == 0 )
+	if( BIT_CHK( 721 ) == 0 )
 	{
 		SET_MASK( 10 );
-	}
-	else if( GET_FIELD_MINOR() == 10 )
-	{
-		SET_MASK( 1 );
 	}
 	else
 	{
@@ -35,6 +62,8 @@ void OpenDormFALL()
 			break;
 		case 3: // Paulownia Mall
 			counter_door();
+			break;
+		case 4: // Cancel
 			break;
 		default:
 			break;

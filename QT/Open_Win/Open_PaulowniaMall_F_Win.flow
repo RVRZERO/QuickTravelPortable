@@ -7,10 +7,15 @@ void OpenPaulF001()
 	CLOSE_MSG_WIN();
 	switch(choice)
 	{
-		case 0: // Iwatodai Dorm
+		case 0: // Paulownia Mall
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 5, 1, 0, 0 );
+			break;
+		case 1: // Iwatodai Dorm
 			return_to_dormitory();
 			break;
-		case 1: // Cancel
+		case 2: // Cancel
 			break;
 		default:
 			break;

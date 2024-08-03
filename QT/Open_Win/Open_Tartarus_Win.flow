@@ -29,6 +29,8 @@ void OpenTart002()
 		case 3:
 			get_out_here();
 			break;
+		case 4: // Cancel
+			break;
 		default:
 			break;
 	}

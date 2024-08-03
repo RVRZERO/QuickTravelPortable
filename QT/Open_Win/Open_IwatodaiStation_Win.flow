@@ -6,11 +6,11 @@ void OpenIwa001()
 	
 	if( ( GET_MONTH() == 10 ) && ( GET_DAY_OF_MONTH() == 4 ) && ( FUNCTION_0083() == 8 ) )
 	{
-		SET_MASK( 14 );
+		SET_MASK( 12 );
 	}
 	else
 	{
-		SET_MASK( 6 );
+		SET_MASK( 2 );
 	}
 	int choice = SEL( IwatodaiStation );
 	CLOSE_MSG_WIN();
@@ -23,6 +23,11 @@ void OpenIwa001()
 				FADE_SYNC();
 				CALL_FIELD( 9, 2, 0, 0 );
 			}
+			break;
+		case 2: // Strip Mall, 1F
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 9, 1, 1, 0 );
 			break;
 		case 3: // Strip Mall, 2F
 			if(ChkIwa001_007())
@@ -40,6 +45,8 @@ void OpenIwa001()
 				CALL_MAP( 3 );
 			}
 			break;
+		case 5: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -50,11 +57,16 @@ void OpenIwa002()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 13 );
+	SET_MASK( 12 );
 	int choice = SEL( IwatodaiStation );
 	CLOSE_MSG_WIN();
 	switch(choice)
 	{
+		case 0: // Iwatodai Station
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 9, 2, 2, 0 );
+			break;
 		case 1: // Iwatodai Strip Mall
 			if(ChkIwa002_001())
 			{
@@ -71,6 +83,8 @@ void OpenIwa002()
 				CALL_MAP( 3 );
 			}
 			break;
+		case 5: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -81,7 +95,7 @@ void OpenIwa007()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 10 );
+	SET_MASK( 2 );
 	int choice = SEL( IwatodaiStation );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -97,6 +111,7 @@ void OpenIwa007()
 				}
 			}
 			break;
+		
 		case 2: // Strip Mall, 1F
 			if(ChkIwa007_001())
 			{
@@ -104,6 +119,11 @@ void OpenIwa007()
 				FADE_SYNC();
 				CALL_FIELD( 9, 1, 7, 0 );
 			}
+			break;
+		case 3: // Strip Mall, 2F
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 9, 7, 0, 0 );
 			break;
 		case 4: // Town map
 			if(ChkIwa007_001())
@@ -115,6 +135,8 @@ void OpenIwa007()
 					CALL_MAP( 3 );
 				}
 			}
+			break;
+		case 5: // Cancel
 			break;
 		default:
 			break;

@@ -3,7 +3,7 @@ void OpenDorm001()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 46 );
+	SET_MASK( 32 );
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
 	switch (choice)
@@ -18,6 +18,19 @@ void OpenDorm001()
 					CALL_FIELD( 7, 2, 1, 0 );
 				}
 			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm001_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 0, 0 );
+			}
+			break;
+		case 2: // Your Room
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 1, 0, 0 );
 			break;
 		case 3: // 3F, Hallway
 			if(ChkDorm001_003())
@@ -64,6 +77,8 @@ void OpenDorm001()
 				}
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -76,16 +91,21 @@ void OpenDorm002()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 49 );
+		SET_MASK( 48 );
 	}
 	else
 	{
-		SET_MASK( 41 );
+		SET_MASK( 32 );
 	}
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
 	switch (choice)
 	{
+		case 0: // 1F, Lounge
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 2, 0, 0 );
+			break;
 		case 1: // 2F, Hallway
 			if(ChkDorm002_003())
 			{
@@ -132,7 +152,7 @@ void OpenDorm002()
 					}
 				}
 			}
-				break;
+			break;
 		case 6: // Town Map
 			if(ChkDorm002_009())
 			{
@@ -143,6 +163,8 @@ void OpenDorm002()
 					CALL_MAP( 5 );
 				}
 			}
+			break;
+		case 7: // Cancel
 			break;
 		default:
 			break;
@@ -156,11 +178,11 @@ void OpenDorm003()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 50 );
+		SET_MASK( 48 );
 	}
 	else
 	{
-		SET_MASK( 42 );
+		SET_MASK( 32 );
 	}
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
@@ -173,6 +195,11 @@ void OpenDorm003()
 				FADE_SYNC();
 				CALL_FIELD( 7, 2, 1, 0 );
 			}
+			break;
+		case 1: // 2F, Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 3, 1, 0 );
 			break;
 		case 2: // Your Room
 			if(ChkDorm003_001())
@@ -218,6 +245,8 @@ void OpenDorm003()
 				}
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -230,11 +259,11 @@ void OpenDorm004()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 56 );
+		SET_MASK( 48 );
 	}
 	else
 	{
-		SET_MASK( 42 );
+		SET_MASK( 32 );
 	}
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
@@ -270,6 +299,11 @@ void OpenDorm004()
 				}
 			}
 			break;
+		case 3: // 3F, Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 4, 1, 0 );
+			break;
 		case 4: // Meeting Room
 			if(ChkDorm004_005())
 			{
@@ -298,6 +332,8 @@ void OpenDorm004()
 				}
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -308,7 +344,7 @@ void OpenDorm005()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 56 );
+	SET_MASK( 32 );
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
 	switch (choice)
@@ -380,6 +416,8 @@ void OpenDorm005()
 				}
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -390,7 +428,7 @@ void OpenDorm006()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 56 );
+	SET_MASK( 32 );
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
 	switch (choice)
@@ -443,6 +481,22 @@ void OpenDorm006()
 				}
 			}
 			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm006_005())
+			{
+				if(ChkDorm005_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 0, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 6, 0, 0 );
+			break;
 		case 6: // Town Map
 			if(ChkDorm006_005())
 			{
@@ -465,6 +519,8 @@ void OpenDorm006()
 					}
 				}
 			}
+			break;
+		case 7: // Cancel
 			break;
 		default:
 			break;
@@ -476,7 +532,7 @@ void OpenDorm007()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 56 );
+	SET_MASK( 32 );
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
 	switch (choice)
@@ -529,6 +585,17 @@ void OpenDorm007()
 				}
 			}
 			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm007_005())
+			{
+				if(ChkDorm005_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 0, 0 );
+				}
+			}
+			break;
 		case 6: // Town Map
 			if(ChkDorm007_005())
 			{
@@ -551,6 +618,8 @@ void OpenDorm007()
 					}
 				}
 			}
+			break;
+		case 7: // Cancel
 			break;
 		default:
 			break;
@@ -583,6 +652,8 @@ void OpenDorm009()
 					CALL_MAP( 5 );
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -595,11 +666,11 @@ void OpenDorm014()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 50 );
+		SET_MASK( 48 );
 	}
 	else
 	{
-		SET_MASK( 42 );
+		SET_MASK( 32 );
 	}
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
@@ -680,6 +751,8 @@ void OpenDorm014()
 				}
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -692,11 +765,11 @@ void OpenDorm015_Male()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 50 );
+		SET_MASK( 48 );
 	}
 	else
 	{
-		SET_MASK( 42 );
+		SET_MASK( 32 );
 	}
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
@@ -710,6 +783,26 @@ void OpenDorm015_Male()
 					FADE( 2, 0 );
 					FADE_SYNC();
 					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if( BIT_CHK( 3081 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 4, 0 );
+				}
+			}
+			else if( BIT_CHK( 3082 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 6, 0 );
 				}
 			}
 			break;
@@ -769,6 +862,8 @@ void OpenDorm015_Male()
 				}
 			}
 			break;
+		case 7: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -781,11 +876,11 @@ void OpenDorm015_Female()
 	SEL_CHK_PAD( 6, 20 );
 	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
 	{
-		SET_MASK( 56 );
+		SET_MASK( 48 );
 	}
 	else
 	{
-		SET_MASK( 42 );
+		SET_MASK( 32 );
 	}
 	int choice = SEL( Dorm );
 	CLOSE_MSG_WIN();
@@ -830,6 +925,26 @@ void OpenDorm015_Female()
 				}
 			}
 			break;
+		case 3: // 3F, Hallway
+			if( BIT_CHK( 3083 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 5, 0 );
+				}
+			}
+			else if( BIT_CHK( 3084 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 4, 0 );
+				}
+			}
+			break;
 		case 4: // Meeting Room
 			if(ChkDorm004_005())
 			{
@@ -863,6 +978,8 @@ void OpenDorm015_Female()
 					}
 				}
 			}
+			break;
+		case 7: // Cancel
 			break;
 		default:
 			break;

@@ -3,11 +3,15 @@ void OpenGoda002()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 1 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
 	{
+		case 0: // 1F Lobby
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 14, 2, 3, 0 );
+			break;
 		case 1: // 2F, Hallway
 			if(ChkGoda002_003())
 			{
@@ -27,6 +31,8 @@ void OpenGoda002()
 				}
 			}
 			break;
+		case 3: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -37,7 +43,6 @@ void OpenGoda003()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 2 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -50,6 +55,11 @@ void OpenGoda003()
 				CALL_FIELD( 14, 2, 0, 0 );
 			}
 			break;
+		case 1: // 2F, Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 14, 3, 1, 0 );
+			break;
 		case 2: // 3F, Hallway
 			if(ChkGoda003_004())
 			{
@@ -57,6 +67,8 @@ void OpenGoda003()
 				FADE_SYNC();
 				CALL_FIELD( 14, 4, 0, 0 );
 			}
+			break;
+		case 3: // Cancel
 			break;
 		default:
 			break;
@@ -68,7 +80,6 @@ void OpenGoda004()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 4 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -92,6 +103,13 @@ void OpenGoda004()
 				CALL_FIELD( 14, 3, 0, 0 );
 			}
 			break;
+		case 2: // 3F, Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 14, 4, 0, 0 );
+			break;
+		case 3: // Cancel
+			break;
 		default:
 			break;
 	}
@@ -102,7 +120,6 @@ void OpenGoda007()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 2 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -118,6 +135,14 @@ void OpenGoda007()
 				}
 			}
 			break;
+		case 1: // 2F, Hallway
+			if(ChkGoda007_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 3, 3, 0 );
+			}
+			break;
 		case 2: // 3F, Hallway
 			if(ChkGoda007_003())
 			{
@@ -128,6 +153,8 @@ void OpenGoda007()
 					CALL_FIELD( 14, 4, 0, 0 );
 				}
 			}
+			break;
+		case 3: // Cancel
 			break;
 		default:
 			break;
@@ -139,7 +166,6 @@ void OpenGoda008()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 2 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -155,6 +181,14 @@ void OpenGoda008()
 				}
 			}
 			break;
+		case 1: // 2F, Hallway
+			if(ChkGoda008_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 3, 4, 0 );
+			}
+			break;
 		case 2: // 3F, Hallway
 			if(ChkGoda008_003())
 			{
@@ -165,6 +199,8 @@ void OpenGoda008()
 					CALL_FIELD( 14, 4, 0, 0 );
 				}
 			}
+			break;
+		case 3: // Cancel
 			break;
 		default:
 			break;
@@ -176,7 +212,6 @@ void OpenGoda009()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 2 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -192,6 +227,14 @@ void OpenGoda009()
 				}
 			}
 			break;
+		case 1: // 2F, Hallway
+			if(ChkGoda009_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 3, 5, 0 );
+			}
+			break;
 		case 2: // 3F, Hallway
 			if(ChkGoda009_003())
 			{
@@ -202,6 +245,8 @@ void OpenGoda009()
 					CALL_FIELD( 14, 4, 0, 0 );
 				}
 			}
+			break;
+		case 3: // Cancel
 			break;
 		default:
 			break;
@@ -213,7 +258,6 @@ void OpenGoda010()
 	OPEN_MSG_WIN();
 	MSG( QuickTravel );
 	SEL_CHK_PAD( 6, 20 );
-	SET_MASK( 2 );
 	int choice = SEL( Godaigo );
 	CLOSE_MSG_WIN();
 	switch(choice)
@@ -229,6 +273,14 @@ void OpenGoda010()
 				}
 			}
 			break;
+		case 1: // 2F, Hallway
+			if(ChkGoda010_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 14, 3, 6, 0 );
+			}
+			break;
 		case 2: // 3F, Hallway
 			if(ChkGoda010_003())
 			{
@@ -239,6 +291,8 @@ void OpenGoda010()
 					CALL_FIELD( 14, 4, 0, 0 );
 				}
 			}
+			break;
+		case 3: // Cancel
 			break;
 		default:
 			break;

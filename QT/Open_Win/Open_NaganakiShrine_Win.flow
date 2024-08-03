@@ -7,7 +7,12 @@ void OpenNaga001()
 	CLOSE_MSG_WIN();
 	switch(choice)
 	{
-		case 0: // Town Map
+		case 0: // Naganaki Shrine
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 12, 1, 2, 0 );
+			break;
+		case 1: // Town Map
 			if(ChkNaga001_MAP())
 			{
 				FADE( 1, 0 );
@@ -15,7 +20,7 @@ void OpenNaga001()
 				CALL_MAP( 4 );
 			}
 			break;
-		case 1: // Cancel
+		case 2: // Cancel
 			break;
 		default:
 			break;
