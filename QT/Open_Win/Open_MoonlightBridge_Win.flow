@@ -1,4 +1,0 @@
-void OpenMoon001()
-{
-	boss_battle_r();
-}

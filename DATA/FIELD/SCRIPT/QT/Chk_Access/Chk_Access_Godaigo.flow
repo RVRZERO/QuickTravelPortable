@@ -1,0 +1,60 @@
+bool ChkGoda002_003() // ( 14, 3, 1, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda003_002() // ( 14, 2, 0, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda003_007() // ( 14, 7, 0, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda007_003() // ( 14, 3, 3, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda003_008() // ( 14, 8, 0, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda008_003() // ( 14, 3, 4, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda003_009() // ( 14, 9, 0, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda009_003() // ( 14, 3, 5, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda003_010() // ( 14, 10, 0, 0 )
+{
+	return 1;
+}
+
+
+bool ChkGoda010_003() // ( 14, 3, 6, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda003_004() // ( 14, 4, 0, 0 )
+{
+	return 1;
+}
+
+bool ChkGoda004_003() // ( 14, 3, 0, 0 )
+{
+	return 1;
+}

@@ -1,7 +1,0 @@
-import( "FIELD.BF" );
-import( "QuickTravel.flow" );
-
-void field_order_party_hook()
-{
-	QtDisplay();
-}

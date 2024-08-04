@@ -1,0 +1,987 @@
+void OpenDorm001()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 32 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm001_003())
+			{
+				if(ChkDorm003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm001_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 0, 0 );
+			}
+			break;
+		case 2: // Your Room
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 1, 0, 0 );
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm001_003())
+			{
+				if(ChkDorm003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm001_003())
+			{
+				if(ChkDorm003_004())
+				{
+					if(ChkDorm004_005())
+					{
+						if(ChkDorm005_006())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm001_003())
+			{
+				if(ChkDorm003_002())
+				{
+					if(ChkDorm002_009())
+					{
+						if(ChkDorm009_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP ( 5 );
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm002()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
+	{
+		SET_MASK( 48 );
+	}
+	else
+	{
+		SET_MASK( 32 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 2, 0, 0 );
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm002_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 1, 0 );
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm002_003())
+			{
+				if(ChkDorm003_001())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 1, 0, 0 );
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm002_003())
+			{
+				if(ChkDorm003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm002_003())
+			{
+				if(ChkDorm003_004())
+				{
+					if(ChkDorm004_005())
+					{
+						if(ChkDorm005_006())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm002_009())
+			{
+				if(ChkDorm009_MAP())
+				{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 5 );
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm003()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
+	{
+		SET_MASK( 48 );
+	}
+	else
+	{
+		SET_MASK( 32 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm003_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 2, 1, 0 );
+			}
+			break;
+		case 1: // 2F, Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 3, 1, 0 );
+			break;
+		case 2: // Your Room
+			if(ChkDorm003_001())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 1, 0, 0 );
+			}
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm003_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 4, 1, 0 );
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm003_004())
+			{
+				if(ChkDorm004_005())
+				{
+					if(ChkDorm005_006())
+					{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm003_002())
+			{
+				if(ChkDorm002_009())
+				{
+					if(ChkDorm009_MAP())
+					{
+						FADE( 1, 0 );
+						FADE_SYNC();
+						CALL_MAP( 5 );
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm004()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
+	{
+		SET_MASK( 48 );
+	}
+	else
+	{
+		SET_MASK( 32 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm004_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 2, 0 );
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm003_001())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 1, 0, 0 );
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 4, 1, 0 );
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm004_005())
+			{
+				if(ChkDorm005_006())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 6, 0, 0 );
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm003_002())
+				{
+					if(ChkDorm002_009())
+					{
+						if(ChkDorm009_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 5 );
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm005()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 32 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm005_004())
+			{
+				if(ChkDorm004_003())
+				{
+					if(ChkDorm003_002())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 2, 1, 0 );
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm005_004())
+			{
+				if(ChkDorm004_003())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 2, 0 );
+				}
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm005_004())
+			{
+				if(ChkDorm004_003())
+				{
+					if(ChkDorm003_001())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 1, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm005_006())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 6, 0, 0 );
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm005_004())
+			{
+				if(ChkDorm004_003())
+				{
+					if(ChkDorm003_002())
+					{
+						if(ChkDorm002_009())
+						{
+							if(ChkDorm009_MAP())
+							{
+								FADE( 1, 0 );
+								FADE_SYNC();
+								CALL_MAP( 5 );
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm006()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 32 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm006_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						if(ChkDorm003_002())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 2, 1, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm006_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 3, 2, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm006_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						if(ChkDorm003_001())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 1, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm006_005())
+			{
+				if(ChkDorm005_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 0, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 7, 6, 0, 0 );
+			break;
+		case 6: // Town Map
+			if(ChkDorm006_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						if(ChkDorm003_002())
+						{
+							if(ChkDorm002_009())
+							{
+								if(ChkDorm009_MAP())
+								{
+									FADE( 1, 0 );
+									FADE_SYNC();
+									CALL_MAP( 5 );
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm007()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 32 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm007_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						if(ChkDorm003_002())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 2, 1, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm007_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 3, 2, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm007_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						if(ChkDorm003_001())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 1, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm007_005())
+			{
+				if(ChkDorm005_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 0, 0 );
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm007_005())
+			{
+				if(ChkDorm005_004())
+				{
+					if(ChkDorm004_003())
+					{
+						if(ChkDorm003_002())
+						{
+							if(ChkDorm002_009())
+							{
+								if(ChkDorm009_MAP())
+								{
+									FADE( 1, 0 );
+									FADE_SYNC();
+									CALL_MAP( 5 );
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm009()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 31 );
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 5: // Iwatodai Dorm
+			if(ChkDorm009_002())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 2, 0, 0 );
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm009_MAP())
+			{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 5 );
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm014()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
+	{
+		SET_MASK( 48 );
+	}
+	else
+	{
+		SET_MASK( 32 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm014_003())
+			{
+				if(ChkDorm003_002())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm014_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 7, 3, 5, 0 );
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm014_003())
+			{
+				if(ChkDorm003_001())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 1, 0, 0 );
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm014_003())
+			{
+				if(ChkDorm003_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm014_003())
+			{
+				if(ChkDorm003_004())
+				{
+					if(ChkDorm004_005())
+					{
+						if(ChkDorm005_006())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm014_003())
+			{
+				if(ChkDorm003_002())
+				{
+					if(ChkDorm002_009())
+					{
+						if(ChkDorm009_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 5 );
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm015_Male()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
+	{
+		SET_MASK( 48 );
+	}
+	else
+	{
+		SET_MASK( 32 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm003_002())
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 2, 1, 0 );
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if( BIT_CHK( 3081 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 4, 0 );
+				}
+			}
+			else if( BIT_CHK( 3082 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 6, 0 );
+				}
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm003_001())
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 1, 0, 0 );
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			if(ChkDorm003_004())
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 1, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm003_004())
+			{
+				if(ChkDorm004_005())
+				{
+					if(ChkDorm005_006())
+					{
+						if(ChkDorm015_ANY())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 7, 6, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm003_002())
+			{
+				if(ChkDorm002_009())
+				{
+					if(ChkDorm009_MAP())
+					{
+						if(ChkDorm015_ANY())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 5 );
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenDorm015_Female()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( CHECK_TIME_SPAN( 4, 7, 4, 18 ) || CHECK_TIME_SPAN( 3, 3, 3, 4 ) )
+	{
+		SET_MASK( 48 );
+	}
+	else
+	{
+		SET_MASK( 32 );
+	}
+	int choice = SEL( Dorm );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Lounge
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm003_002())
+				{
+					if(ChkDorm015_ANY())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 2, 1, 0 );
+					}
+				}
+			}
+			break;
+		case 1: // 2F, Hallway
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 3, 2, 0 );
+				}
+			}
+			break;
+		case 2: // Your Room
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm003_001())
+				{
+					if(ChkDorm015_ANY())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 1, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 3: // 3F, Hallway
+			if( BIT_CHK( 3083 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 5, 0 );
+				}
+			}
+			else if( BIT_CHK( 3084 ) )
+			{
+				if(ChkDorm015_ANY())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 7, 4, 4, 0 );
+				}
+			}
+			break;
+		case 4: // Meeting Room
+			if(ChkDorm004_005())
+			{
+				if(ChkDorm005_006())
+				{
+					if(ChkDorm015_ANY())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 7, 6, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Town Map
+			if(ChkDorm004_003())
+			{
+				if(ChkDorm003_002())
+				{
+					if(ChkDorm002_009())
+					{
+						if(ChkDorm009_MAP())
+						{
+							if(ChkDorm015_ANY())
+							{
+								FADE( 1, 0 );
+								FADE_SYNC();
+								CALL_MAP( 5 );
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 7: // Cancel
+			break;
+		default:
+			break;
+	}
+}

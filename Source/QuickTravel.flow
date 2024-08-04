@@ -1,0 +1,356 @@
+import ("QT/Chk_Access/Chk_Access_Dorm_F.flow");
+import ("QT/Chk_Access/Chk_Access_PaulowniaMall_F.flow");
+import ("QT/Chk_Access/Chk_Access_GekkoukanHigh.flow");
+import ("QT/Chk_Access/Chk_Access_Dorm.flow");
+import ("QT/Chk_Access/Chk_Access_PaulowniaMall.flow");
+import ("QT/Chk_Access/Chk_Access_IwatodaiStation.flow");
+import ("QT/Chk_Access/Chk_Access_PortIslandStation.flow");
+import ("QT/Chk_Access/Chk_Access_NaganakiShrine.flow");
+import ("QT/Chk_Access/Chk_Access_Godaigo.flow");
+import ("QT/Chk_Access/Chk_Access_Tartarus.flow");
+import ("QT/Chk_Access/Chk_Access_YakushimaBeach.flow");
+import ("QT/Chk_Access/Chk_Access_MoonlightBridge.flow");
+import ("QT/Chk_Access/Chk_Access.msg");
+
+import ("QT/Open_Win/Open_Dorm_F_Win.flow");
+import ("QT/Open_Win/Open_PaulowniaMall_F_Win.flow");
+import ("QT/Open_Win/Open_GekkoukanHigh_Win.flow");
+import ("QT/Open_Win/Open_Dorm_Win.flow");
+import ("QT/Open_Win/Open_PaulowniaMall_Win.flow");
+import ("QT/Open_Win/Open_IwatodaiStation_Win.flow");
+import ("QT/Open_Win/Open_PortIslandStation_Win.flow");
+import ("QT/Open_Win/Open_NaganakiShrine_Win.flow");
+import ("QT/Open_Win/Open_Godaigo_Win.flow");
+import ("QT/Open_Win/Open_Tartarus_Win.flow");
+import ("QT/Open_Win/Open_YakushimaBeach_Win.flow");
+import ("QT/Open_Win/Open_MoonlightBridge_Win.flow");
+import ("QT/Open_Win/Open_Win.msg");
+
+void QtDisplay()
+{
+	switch(GET_FIELD_MAJOR())
+	{
+		case 4: // Dorm (The Answer)
+			QtDormF();
+			break;
+		case 5: // Paulownia Mall (The Answer)
+			QtPaulF();
+			break;
+		case 6: // Gekkoukan High
+			QtGek();
+			break;
+		case 7: // Dorm
+			QtDorm();
+			break;
+		case 8: // Paulownia Mall
+			QtPaul();
+			break;
+		case 9: // Iwatodai Station
+			QtIwa();
+			break;
+		case 10: // Port Island Station
+			QtPort();
+			break;
+		case 12: // Naganaki Shrine
+			QtNaga();
+			break;
+		case 14: // Godaigo (Kyoto Trip)
+			QtGoda();
+			break;
+		case 32: // Tartarus
+			if(GET_FLOOR_ID() == 1)
+			{
+				QtTart();
+			}
+			else
+			{
+				field_order_party_unhooked();
+			}
+			break;
+		case 33: // Yakushima Beach
+			QtYaku();
+			break;
+		case 37: // Moonlight Bridge
+			QtMoon();
+			break;
+		default:
+			field_order_party_unhooked();
+			break;
+	}
+}
+
+void NoQt()
+{
+	OPEN_MSG_WIN();
+	MSG( Stop_QuickTravel );
+	CLOSE_MSG_WIN();
+}
+
+void QtDormF()
+{
+	
+	switch(GET_FIELD_MINOR())
+	{
+		case 3: // 2F, Hallway
+			OpenDormFALL();
+			break;
+		case 4: // 3F, Hallway
+			OpenDormFALL();
+			break;
+		case 5: // 4F, Hallway
+			OpenDormFALL();
+			break;
+		case 6: // Meeting Room
+			OpenDormFALL();
+			break;
+		case 7: // 5F, Hallway
+			OpenDormFALL();
+			break;
+		case 10: // 1F, Lounge
+			OpenDormF010();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtPaulF()
+{
+	OpenPaulF001();
+}
+
+void QtGek()
+{
+	if( ( BIT_CHK( 3680 ) ) == 1 && ( BIT_CHK( 72 ) == 1 ) )
+	{
+		OPEN_MSG_WIN();
+		MSG( STOP_TEACHERS_ROOM );
+		CLOSE_MSG_WIN();
+		return;
+	}
+	else if( BIT_CHK( 3680 ) == 1 )
+	{
+		ChkGek004_005();
+		return;
+	}
+	switch(GET_FIELD_MINOR())
+	{
+		case 1: // 1F, Main Lobby
+			OpenGek001();
+			break;
+		case 2: // School Entranceway
+			OpenGek002();
+			break;
+		case 3: // Classroom
+			OpenGek003();
+			break;
+		case 4: // 2F, Hallway
+			OpenGek004();
+			break;
+		case 5: // Rooftop
+			OpenGek005();
+			break;
+		case 7: // 1F, Faculty Office Hallway
+			OpenGek007();
+			break;
+		case 11: // 1F, Laboratory Hallway
+			OpenGek011();
+			break;
+		case 16: // 1F, Corridor
+			OpenGek016();
+			break;
+		case 20: // 1F, Sport Clubs Hallway
+			OpenGek020();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtDorm()
+{
+	bool male = ( BIT_CHK( 3081 ) == 1 ) || ( BIT_CHK( 3082 ) == 1 );
+	bool female = ( BIT_CHK( 3084 ) == 1 ) || ( BIT_CHK( 3083 ) == 1 ); 
+	bool operation = ( FUNCTION_0083() == 8 ) && ( ( ( GET_MONTH() == 7 ) && ( GET_DAY_OF_MONTH() == 7 ) ) || ( ( GET_MONTH() == 11 ) && ( GET_DAY_OF_MONTH() == 3 ) ) || ( ( GET_MONTH() == 11 ) && ( GET_DAY_OF_MONTH() == 22 ) ) );
+	if( BIT_CHK( 3584 ) == 1 )
+	{
+		ChkDorm003_015_Junpei();
+		return;
+	}
+	if(operation)
+	{
+		ChkDorm006_005();
+		return;
+	}
+	switch(GET_FIELD_MINOR())
+	{
+		case 1: // Your Room
+			OpenDorm001();
+			break;
+		case 2: // 1F, Lounge
+			OpenDorm002();
+			break;
+		case 3: // 2F, Hallway
+			OpenDorm003();
+			break;
+		case 4: // 3F, Hallway
+			OpenDorm004();
+			break;
+		case 5: // 4F, Hallway
+			OpenDorm005();
+			break;
+		case 6: // Meeting Room
+			OpenDorm006();
+			break;
+		case 7: // 5F, Hallway
+			OpenDorm007();
+			break;
+		case 9: // Dorm Entrance
+			OpenDorm009();
+			break;
+		case 14: // Vacant Room (Shinjiro)
+			OpenDorm014();
+		case 15: // Vacant Room (Junpei, Ken, Fuuka, & Aigis)
+			if(male)
+			{
+				OpenDorm015_Male();
+			}
+			else if(female)
+			{
+				OpenDorm015_Female();
+			}
+			break;
+		default:
+			NoQt();
+			break;
+		}
+}
+
+void QtPaul()
+{
+	bool operation = ( GET_MONTH() == 9 ) && ( GET_DAY_OF_MONTH() == 5 ) && ( FUNCTION_0083() == 8 );
+	if(operation)
+	{
+		ChkPaul001_002();
+		return;
+	}
+	switch(GET_FIELD_MINOR())
+	{
+		case 1: // Paulownia Mall
+			OpenPaul001();
+			break;
+		case 2: // Club Escapade
+			OpenPaul002();
+			break;
+		case 9: // Back Alley
+			OpenPaul009();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtIwa()
+{
+	switch(GET_FIELD_MINOR())
+	{
+		case 1: // Iwatodai Strip Mall
+			OpenIwa001();
+			break;
+		case 2: // Iwatodai Station
+			OpenIwa002();
+			break;
+		case 7: // Strip Mall, 2F
+			OpenIwa007();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtPort()
+{
+	switch(GET_FIELD_MINOR())
+	{
+		case 1: // 
+			OpenPort001();
+			break;
+		case 2: // 
+			OpenPort002();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtNaga()
+{
+	switch(GET_FIELD_MINOR())
+	{
+		case 1: // Naganaki Shrine
+			OpenNaga001();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtGoda()
+{
+	switch(GET_FIELD_MINOR())
+	{
+		case 2: // 1F Lobby
+			OpenGoda002();
+			break;
+		case 3: // 2F Hallway
+			OpenGoda003();
+			break;
+		case 4: // 3F Hallway
+			OpenGoda004();
+			break;
+		case 7: // 3F Hallway
+			OpenGoda007();
+			break;
+		case 8: // 3F Hallway
+			OpenGoda008();
+			break;
+		case 9: // 3F Hallway
+			OpenGoda009();
+			break;
+		case 10: // 3F Hallway
+			OpenGoda010();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtTart()
+{
+	switch(GET_FIELD_MINOR())
+	{
+		case 2: // Tartarus, Entrance
+			OpenTart002();
+			break;
+		default:
+			NoQt();
+			break;
+	}
+}
+
+void QtYaku()
+{
+	OpenYakuALL();
+}
+
+void QtMoon()
+{
+	OpenMoon001();
+}

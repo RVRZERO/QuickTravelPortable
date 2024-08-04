@@ -1,0 +1,4 @@
+void OpenYakuALL()
+{
+	ChkYaku001_OUT();
+}

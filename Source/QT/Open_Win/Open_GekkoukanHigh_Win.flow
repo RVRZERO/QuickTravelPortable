@@ -1,0 +1,689 @@
+void OpenGek001()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) )
+	{
+		SET_MASK( 60 );
+	}
+	else
+	{
+		SET_MASK( 1 );
+	}
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // Main Lobby
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 6, 1, 6, 0 );
+			break;
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek001_007())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 7, 0, 0 );
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek001_011())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 11, 2, 0 );
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek001_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 4, 3, 0 );
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek001_004())
+			{
+				if(ChkGek004_003())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 3, 0, 0 );
+				}
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek001_002())
+			{
+				if(ChkGek002_MAP())
+				{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 0 );
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek002()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek002_001())
+			{
+				if(ChkGek001_007())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 7, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek002_001())
+			{
+				if(ChkGek001_011())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 11, 2, 0 );
+				}
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek002_001())
+			{
+				if(ChkGek001_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 4, 3, 0 );
+				}
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek002_001())
+			{
+				if(ChkGek001_004())
+				{
+					if(ChkGek004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 3, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek002_MAP())
+			{
+					FADE( 1, 0 );
+					FADE_SYNC();
+					CALL_MAP( 0 );
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek003()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek003_004())
+			{
+				if(ChkGek004_001())
+				{
+					if(ChkGek001_007())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 7, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek003_004())
+			{
+				if(ChkGek004_011())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 11, 0, 0 );
+				}
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek003_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 4, 1, 0 );
+			}
+			break;
+		case 4: // Classroom
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 6, 3, 4, 0 );
+			break;
+		case 5: // Town Map
+			if(ChkGek003_004())
+			{
+				if(ChkGek004_001())
+				{
+					if(ChkGek001_002())
+					{
+						if(ChkGek002_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek004()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek004_001())
+			{
+				if(ChkGek001_007())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 7, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek004_011())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 11, 0, 0 );
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 6, 4, 1, 0 );
+			break;
+		case 4: // Classroom
+			if(ChkGek004_003())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 3, 0, 0 );
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek004_001())
+			{
+				if(ChkGek001_002())
+				{
+					if(ChkGek002_MAP())
+					{
+						FADE( 1, 0 );
+						FADE_SYNC();
+						CALL_MAP( 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek005()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek005_004())
+			{
+				if(ChkGek004_001())
+				{
+					if(ChkGek001_007())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 7, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek005_004())
+			{
+				if(ChkGek004_011())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 11, 0, 0 );
+				}
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek005_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 4, 8, 0 );
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek005_004())
+				{
+					if(ChkGek004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 3, 1, 0 );
+					}
+				}
+			break;
+		case 5: // Town Map
+			if(ChkGek005_004())
+			{
+				if(ChkGek004_001())
+				{
+					if(ChkGek001_002())
+					{
+						if(ChkGek002_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek007()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	if( ( GET_MONTH() == 4 ) && ( GET_DAY_OF_MONTH() == 7 ) )
+	{
+		SET_MASK( 60 );
+	}
+	else
+	{
+		SET_MASK( 1 );
+	}
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 0: // 1F, Main Lobby
+			if(ChkGek007_001())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 1, 3, 0 );
+			}
+			break;
+		case 1: // 1F, Faculty Office Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 6, 7, 0, 0 );
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek007_001())
+			{
+				if(ChkGek001_011())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 11, 2, 0 );
+				}
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek007_001())
+			{
+				if(ChkGek001_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 4, 3, 0 );
+				}
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek007_001())
+			{
+				if(ChkGek001_004())
+				{
+					if(ChkGek004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 3, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek007_001())
+			{
+				if(ChkGek001_002())
+				{
+					if(ChkGek002_MAP())
+					{
+						FADE( 1, 0 );
+						FADE_SYNC();
+						CALL_MAP( 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek011()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek011_001())
+			{
+				if(ChkGek001_007())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 7, 0, 0 );
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			FADE( 2, 0 );
+			FADE_SYNC();
+			CALL_FIELD( 6, 11, 2, 0 );
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek011_004())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 4, 4, 0 );
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek011_004())
+			{
+				if(ChkGek004_003())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 3, 1, 0 );
+				}
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek011_001())
+			{
+				if(ChkGek001_002())
+				{
+					if(ChkGek002_MAP())
+					{
+						FADE( 1, 0 );
+						FADE_SYNC();
+						CALL_MAP( 0 );
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek016()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek016_011())
+			{
+				if(ChkGek011_001())
+				{
+					if(ChkGek001_007())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 7, 0, 0 );
+					}
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek016_011())
+			{
+				FADE( 2, 0 );
+				FADE_SYNC();
+				CALL_FIELD( 6, 11, 1, 0 );
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek016_011())
+			{
+				if(ChkGek011_004())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 4, 4, 0 );
+				}
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek016_011())
+			{
+				if(ChkGek011_004())
+				{
+					if(ChkGek004_003())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 3, 1, 0 );
+					}
+				}
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek016_011())
+			{
+				if(ChkGek011_001())
+				{
+					if(ChkGek001_002())
+					{
+						if(ChkGek002_MAP())
+						{
+							FADE( 1, 0 );
+							FADE_SYNC();
+							CALL_MAP( 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
+
+void OpenGek020()
+{
+	OPEN_MSG_WIN();
+	MSG( QuickTravel );
+	SEL_CHK_PAD( 6, 20 );
+	SET_MASK( 1 );
+	int choice = SEL( GekkoukanHigh );
+	CLOSE_MSG_WIN();
+	switch (choice)
+	{
+		case 1: // 1F, Faculty Office Hallway
+			if(ChkGek020_016())
+			{
+				if(ChkGek016_011())
+				{
+					if(ChkGek011_001())
+					{
+						if(ChkGek001_007())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 6, 7, 0, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 2: // 1F, Laboratory Hallway
+			if(ChkGek020_016())
+			{
+				if(ChkGek016_011())
+				{
+					FADE( 2, 0 );
+					FADE_SYNC();
+					CALL_FIELD( 6, 11, 1, 0 );
+				}
+			}
+			break;
+		case 3: // 2F, Classroom Hallway
+			if(ChkGek020_016())
+			{
+				if(ChkGek016_011())
+				{
+					if(ChkGek011_004())
+					{
+						FADE( 2, 0 );
+						FADE_SYNC();
+						CALL_FIELD( 6, 4, 4, 0 );
+					}
+				}
+			}
+			break;
+		case 4: // Classroom
+			if(ChkGek020_016())
+			{
+				if(ChkGek016_011())
+				{
+					if(ChkGek011_004())
+					{
+						if(ChkGek004_003())
+						{
+							FADE( 2, 0 );
+							FADE_SYNC();
+							CALL_FIELD( 6, 3, 1, 0 );
+						}
+					}
+				}
+			}
+			break;
+		case 5: // Town Map
+			if(ChkGek020_016())
+			{
+				if(ChkGek016_011())
+				{
+					if(ChkGek011_001())
+					{
+						if(ChkGek001_002())
+						{
+							if(ChkGek002_MAP())
+							{
+								FADE( 1, 0 );
+								FADE_SYNC();
+								CALL_MAP( 0 );
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 6: // Cancel
+			break;
+		default:
+			break;
+	}
+}
